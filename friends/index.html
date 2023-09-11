@@ -598,7 +598,7 @@
 
 
 <div class="post-detail-header" id="thumbnail_canvas" style="background-repeat: no-repeat; background-size: cover; 
-  background-position: center center;position: relative;background-image:url('/glasswarm/friend.png')">
+  background-position: center center;position: relative;background-image:url('/glasswarm/friend.jpg')">
   <div class="post-detail-header-mask"></div>
   <canvas id="header_canvas"style="position:absolute;bottom:0;pointer-events:none;"></canvas>
   
@@ -993,7 +993,7 @@
         <div class="webinfo-item">
           <div>最后活动时间：</div>
           
-            <div id="last-update" style="display: none;">Mon Sep 11 2023 19:33:12 GMT+0800 (China Standard Time)</div>
+            <div id="last-update" style="display: none;">Mon Sep 11 2023 20:20:49 GMT+0800 (China Standard Time)</div>
             <div id="last-update-show">2023-09-11 日</div>
           
         </div>
@@ -1134,7 +1134,7 @@
 			clearInterval(this.time);
 		},
 		mounted() {
-			let prop = '/glasswarm/body.png' || '';
+			let prop = '/glasswarm/body.jpg' || '';
 			let isImg = prop.includes('.bmp') || prop.includes('.jpg') || prop.includes('.png') || prop.includes('.tif') || prop.includes('.gif') || prop.includes('.pcx') || prop.includes('.tga') || prop.includes('.exif') || prop.includes('.fpx') || prop.includes('.psd') || prop.includes('.cdr') || prop.includes('.pcd') || prop.includes('.dxf') || prop.includes('.ufo') || prop.includes('.eps') || prop.includes('.ai') || prop.includes('.raw') || prop.includes('.WMF') || prop.includes('.webp') || prop.includes('.jpeg') || prop.includes('http://') || prop.includes('https://')
 			if (isImg) {
 				let img = prop.split(',');

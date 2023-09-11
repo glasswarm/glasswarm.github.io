@@ -178,7 +178,7 @@ pre:hover::-webkit-scrollbar-thumb:hover,
   color: #fff;
 }
 .bg-floor {
-  background: url("/glasswarm/body.png");
+  background: url("/glasswarm/body.jpg");
   background-size: cover;
   transition: all 0.3s;
 }
@@ -1881,7 +1881,7 @@ pre:hover::-webkit-scrollbar-thumb:hover,
   color: #42b983;
 }
 .bg-light-floor-tags {
-  background: url("/glasswarm/body.png");
+  background: url("/glasswarm/body.jpg");
   background-size: cover;
   background-position: center center;
 }
@@ -2030,7 +2030,7 @@ pre:hover::-webkit-scrollbar-thumb:hover,
   color: #42b983;
 }
 .bg-light-floor-categories {
-  background: url("/glasswarm/body.png");
+  background: url("/glasswarm/body.jpg");
   background-size: cover;
   background-position: center center;
 }
@@ -2615,7 +2615,7 @@ pre:hover::-webkit-scrollbar-thumb:hover,
   word-break: break-all;
 }
 .bg-light-floor-archive {
-  background: url("/glasswarm/body.png");
+  background: url("/glasswarm/body.jpg");
   background-size: cover;
   background-position: center center;
 }
@@ -2837,7 +2837,7 @@ pre:hover::-webkit-scrollbar-thumb:hover,
   line-height: 18px;
 }
 .bg-light-floor-tagDetail {
-  background: url("/glasswarm/body.png");
+  background: url("/glasswarm/body.jpg");
   background-size: cover;
   background-position: center center;
 }
