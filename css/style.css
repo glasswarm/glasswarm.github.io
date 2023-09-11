@@ -620,7 +620,7 @@ pre:hover::-webkit-scrollbar-thumb:hover,
 }
 #l_side .side_tagcloud {
   background: #fff;
-  order: 1;
+  order: 0;
 }
 #l_side .side_tagcloud .content {
   text-align: justify;
@@ -638,7 +638,7 @@ pre:hover::-webkit-scrollbar-thumb:hover,
   border-bottom: 1px solid rgba(66,185,133,0.8);
 }
 #l_side .side_recent_post {
-  order: ;
+  order: -1;
   background: #fff;
 }
 #l_side .side_recent_post .aside-list .aside-list-item {
