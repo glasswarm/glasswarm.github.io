@@ -11,7 +11,7 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-  <title>标签: 备忘录 | T琉璃T</title>
+  <title>关于QT的程序打包 | T琉璃T</title>
 
   <link rel="icon" type="image/jpeg" href="/glasswarm/head.jpg">
   <link rel="stylesheet" href="https://at.alicdn.com/t/font_1911880_c1nvbyezg17.css">
@@ -585,110 +585,715 @@
 </header>
         <!-- 内容区域 -->
         
+ <!-- prismjs 代码高亮 -->
+ 
 
-<div class="bg-dark-floor" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -2;"></div>
-<div class="bg-light-floor-tagDetail" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -3;"></div>
 
-<div class="tag-header" style="background-image: url('https://pic1.zhimg.com/80/v2-604a15cef201cf177943af2d915eb2e7_1440w.jpg?source=1940ef5c');">
-  <div class="tag-header-title">
-    标签
-  </div>
-  <div class="tag-header-desc">
+<div class="bg-dark-floor" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -1;"></div>
+
+
+  <!-- 文章详情页顶部图片和标题 -->
+
+
+
+
+<div class="post-detail-header" id="thumbnail_canvas" style="background-repeat: no-repeat; background-size: cover; 
+  background-position: center center;position: relative;background-image:url('/picture/QT/%E5%85%B3%E4%BA%8EQT%E7%9A%84%E7%A8%8B%E5%BA%8F%E6%89%93%E5%8C%85/theme.png')">
+  <div class="post-detail-header-mask"></div>
+  <canvas id="header_canvas"style="position:absolute;bottom:0;pointer-events:none;"></canvas>
   
-    <span class="title" id="tag-header-desc"></span>
-    <script>
-  function typedFn() {
-    const el = '#tag-header-desc';
-    const type = 'tagDetail';
-    let desc = '愿你如风，被人温柔以待'
-    var typed = new Typed(el, {
-      strings: [desc],
-      startDelay: 100,
-      typeSpeed: 100,
-      loop: true,
-      backSpeed: 50,
-      showCursor: true
-    });
-  }
-  typedFn();
+  <div class="post-detail-header_info-box">
+    <div class="title-box">
+      <span class="title">
+        关于QT的程序打包
+      </span>
+    </div>
+    
+    
+      
+        <span class="post-detail-header_date">
+          <i class="fas fa-calendar"></i> 发表于：2023-12-04 |
+        </span>
+      
+
+      
+
+      
+        <div class="post-detail-header_wordcount">
+          <span class="totalcount">
+            <i class="fas fa-file-text-o"></i> 字数统计: 545 |
+          </span>
+  
+          <span class="min2read">
+            <i class="fas fa-clock"></i> 阅读时长: 2分钟 |
+          </span>
+  
+          
+        </div>
+      
+    
+  </div>
+  
+  
+    <script src="/js/bubble/bubble.js"></script>
+  
+</div>
+
+
+
+
+
+<div class="post-detail-content post-row" 
+  style="padding-top: 0px;">
+  <div class="main-content">
+    <article class="post post-detail">
+      <div class="post-content">
+        <h1 id="QT的exe程序打包方式"><a href="#QT的exe程序打包方式" class="headerlink" title="QT的exe程序打包方式"></a>QT的exe程序打包方式</h1><h2 id="直接选择QT中的debug-release打包方式"><a href="#直接选择QT中的debug-release打包方式" class="headerlink" title="直接选择QT中的debug&#x2F;release打包方式"></a>直接选择QT中的debug&#x2F;release打包方式</h2><p><img src="/picture/QT/%E5%85%B3%E4%BA%8EQT%E7%9A%84%E7%A8%8B%E5%BA%8F%E6%89%93%E5%8C%85/1.png" class="lazyload placeholder" data-srcset="/picture/QT/%E5%85%B3%E4%BA%8EQT%E7%9A%84%E7%A8%8B%E5%BA%8F%E6%89%93%E5%8C%85/1.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="图四"></p>
+<blockquote>
+<p><strong><font size="4">点击绿色三角直接打包生成下文件</font></strong></p>
+</blockquote>
+<ul>
+<li><strong><font size="4">打包的文件会生成在如下图该文件目录下，可以自行修改</font></strong></li>
+</ul>
+<div class="gallery stretch" col='2'>
+              <div class="img-wrap"><div class="img-bg"><img class="img lazyload placeholder" src="/picture/QT/关于QT的程序打包/2.png" class="lazyload placeholder" data-srcset="/picture/QT/关于QT的程序打包/2.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="图五" style="height:400px;"/></div><span class="image-caption">图五</span></div> <div class="img-wrap"><div class="img-bg"><img class="img lazyload placeholder" src="/picture/QT/关于QT的程序打包/3.png" class="lazyload placeholder" data-srcset="/picture/QT/关于QT的程序打包/3.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="图六" style="height:400px;"/></div><span class="image-caption">图六</span></div> 
+            </div>
+<p><strong><font size="4">在该文件下的debug&#x2F;release文件夹（具体看打包方式）找到.exe文件，执行后且会提示缺少qt5xxxx.dll文件</font></strong><br><img src="/picture/QT/%E5%85%B3%E4%BA%8EQT%E7%9A%84%E7%A8%8B%E5%BA%8F%E6%89%93%E5%8C%85/4.png" class="lazyload placeholder" data-srcset="/picture/QT/%E5%85%B3%E4%BA%8EQT%E7%9A%84%E7%A8%8B%E5%BA%8F%E6%89%93%E5%8C%85/4.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="图七"></p>
+<blockquote>
+<p><strong><font size="4">解决方法有两种，配置环境变量和直接使用qt自带的cmd工具，填补所需的库</font></strong></p>
+</blockquote>
+<h2 id="一-配置环境变量来解决报错"><a href="#一-配置环境变量来解决报错" class="headerlink" title="一.配置环境变量来解决报错"></a>一.配置环境变量来解决报错</h2><ul>
+<li><strong><font size="4">我选择的打包方式是 MinGW 64-bit 的,所以找到下图目录中的文件</font></strong><br><img src="/picture/QT/%E5%85%B3%E4%BA%8EQT%E7%9A%84%E7%A8%8B%E5%BA%8F%E6%89%93%E5%8C%85/5.png" class="lazyload placeholder" data-srcset="/picture/QT/%E5%85%B3%E4%BA%8EQT%E7%9A%84%E7%A8%8B%E5%BA%8F%E6%89%93%E5%8C%85/5.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="图八"><br><strong><font size="4">而报错的原因是因为缺少环境变量，这里可以在用户变量或者系统变量任选一个，点击PATH，添加环境变量</font></strong><br><img src="/picture/QT/%E5%85%B3%E4%BA%8EQT%E7%9A%84%E7%A8%8B%E5%BA%8F%E6%89%93%E5%8C%85/6.png" class="lazyload placeholder" data-srcset="/picture/QT/%E5%85%B3%E4%BA%8EQT%E7%9A%84%E7%A8%8B%E5%BA%8F%E6%89%93%E5%8C%85/6.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="图九"><blockquote>
+<p><strong><font size="4">例如我的PATH中的变量名</font></strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">E:\QT\5.12.8\5.12.8\mingw73_64\bin </span><br></pre></td></tr></table></figure>
+<br>
+       
+<p><strong><font size="4">点击完成后就可以正常打开.exe文件了</font></strong></p>
+</blockquote>
+</li>
+</ul>
+<h2 id="二-使用QT自带的cmd工具-不需要用户下载qt库"><a href="#二-使用QT自带的cmd工具-不需要用户下载qt库" class="headerlink" title="二.使用QT自带的cmd工具(不需要用户下载qt库)"></a>二.使用QT自带的cmd工具(不需要用户下载qt库)</h2><blockquote>
+<p><strong><font size="4">在实际使用中，用户不可能使用别人的exe程序还要下载一个QT配置环境变量，所以需要用QT自带的cmd工具将所缺失的文件一起打包</font></strong></p>
+<blockquote>
+<p><strong><font size="4">可以将包含.exe文件的debug&#x2F;release的文件夹复制到其他位置</font></strong></p>
+</blockquote>
+</blockquote>
+<ul>
+<li><strong><font size="4">复制exe文件所在的路径，并按下win键，打开搜索栏搜索qt，打开MinGW 64-bit的版本</font></strong></li>
+</ul>
+<div class="gallery stretch" col='2'>
+              <div class="img-wrap"><div class="img-bg"><img class="img lazyload placeholder" src="/picture/QT/关于QT的程序打包/7.png" class="lazyload placeholder" data-srcset="/picture/QT/关于QT的程序打包/7.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="图十" style="height:400px;"/></div><span class="image-caption">图十</span></div> <div class="img-wrap"><div class="img-bg"><img class="img lazyload placeholder" src="/picture/QT/关于QT的程序打包/8.png" class="lazyload placeholder" data-srcset="/picture/QT/关于QT的程序打包/8.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="图十一" style="height:400px;"/></div><span class="image-caption">图十一</span></div> 
+            </div>
+
+<ul>
+<li><strong><font size="4">输入windeployqt + exe文件所在的路径 + \应用名.exe</font></strong><blockquote>
+<p><strong><font size="4">例如</font></strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">windeployqt C:\Users\glass\Desktop\debug\myTcpClient.exe</span><br></pre></td></tr></table></figure></blockquote>
+</li>
+</ul>
+<ul>
+<li><strong><font size="4">运行成功</font></strong></li>
+</ul>
+<div class="gallery stretch" col='2'>
+              <div class="img-wrap"><div class="img-bg"><img class="img lazyload placeholder" src="/picture/QT/关于QT的程序打包/9.png" class="lazyload placeholder" data-srcset="/picture/QT/关于QT的程序打包/9.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="图十二" style="height:400px;"/></div><span class="image-caption">图十二</span></div> <div class="img-wrap"><div class="img-bg"><img class="img lazyload placeholder" src="/picture/QT/关于QT的程序打包/10.png" class="lazyload placeholder" data-srcset="/picture/QT/关于QT的程序打包/10.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="图十三" style="height:400px;"/></div><span class="image-caption">图十三</span></div> 
+            </div>
+
+<ul>
+<li><strong><font size="4">再次点击.exe程序正常运行</font></strong><br><img src="/picture/QT/%E5%85%B3%E4%BA%8EQT%E7%9A%84%E7%A8%8B%E5%BA%8F%E6%89%93%E5%8C%85/11.png" class="lazyload placeholder" data-srcset="/picture/QT/%E5%85%B3%E4%BA%8EQT%E7%9A%84%E7%A8%8B%E5%BA%8F%E6%89%93%E5%8C%85/11.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="图十四"></li>
+</ul>
+<h1 id="关于QT-for-Android的打包方法"><a href="#关于QT-for-Android的打包方法" class="headerlink" title="关于QT for Android的打包方法"></a>关于QT for Android的打包方法</h1><h2 id="Android打包"><a href="#Android打包" class="headerlink" title="Android打包"></a>Android打包</h2><blockquote>
+<p><strong><font size="4">需要先配置QT for Android环境，见我的下一篇博客，关于QT与QT for Android的安装(二)</font></strong></p>
+</blockquote>
+<ul>
+<li><strong><font size="4">首先选择开发模式，点击绿色三角，开始编译</font></strong><br><img src="/picture/QT/%E5%85%B3%E4%BA%8EQT%E7%9A%84%E7%A8%8B%E5%BA%8F%E6%89%93%E5%8C%85/12.png" class="lazyload placeholder" data-srcset="/picture/QT/%E5%85%B3%E4%BA%8EQT%E7%9A%84%E7%A8%8B%E5%BA%8F%E6%89%93%E5%8C%85/12.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="图十五"></li>
+</ul>
+<ul>
+<li><strong><font size="4">出现No Device Found不用害怕，关闭继续点击绿色三角</font></strong><br><img src="/picture/QT/%E5%85%B3%E4%BA%8EQT%E7%9A%84%E7%A8%8B%E5%BA%8F%E6%89%93%E5%8C%85/13.png" class="lazyload placeholder" data-srcset="/picture/QT/%E5%85%B3%E4%BA%8EQT%E7%9A%84%E7%A8%8B%E5%BA%8F%E6%89%93%E5%8C%85/13.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="图十六"></li>
+</ul>
+<ul>
+<li><strong><font size="4">编译完成，在图十八看到文件输出路径</font></strong><div class="gallery stretch" col='2'>
+              <div class="img-wrap"><div class="img-bg"><img class="img lazyload placeholder" src="/picture/QT/关于QT的程序打包/14.png" class="lazyload placeholder" data-srcset="/picture/QT/关于QT的程序打包/14.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="图十七" style="height:400px;"/></div><span class="image-caption">图十七</span></div> <div class="img-wrap"><div class="img-bg"><img class="img lazyload placeholder" src="/picture/QT/关于QT的程序打包/15.png" class="lazyload placeholder" data-srcset="/picture/QT/关于QT的程序打包/15.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="图十八" style="height:400px;"/></div><span class="image-caption">图十八</span></div> 
+            </div></li>
+</ul>
+<blockquote>
+<p><strong><font size="4">找到生成的文件，打包的apk在生成的文件夹\android-build\build\outputs\apk\debug</font></strong><br><img src="/picture/QT/%E5%85%B3%E4%BA%8EQT%E7%9A%84%E7%A8%8B%E5%BA%8F%E6%89%93%E5%8C%85/16.png" class="lazyload placeholder" data-srcset="/picture/QT/%E5%85%B3%E4%BA%8EQT%E7%9A%84%E7%A8%8B%E5%BA%8F%E6%89%93%E5%8C%85/16.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="图十九"></p>
+</blockquote>
+<h2 id="完"><a href="#完" class="headerlink" title="完"></a>完</h2>
+      </div>
+      <div class="post-tags-categories">
+        
+        <div class="tags">
+          
+            <a href="/tags/QT/" class="">
+              QT
+            </a>
+          
+        </div>
+        
+      </div>
+      
+        <div class="copyright">
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+    <strong>作者:  </strong>T琉璃T</a>
+    </li>
+    <li class="post-copyright-link">
+    <strong>文章链接:  </strong>
+    <a href="/2023/12/04/QT/1关于QT与QT for android的安装/关于QT的程序打包/" target="_blank" title="关于QT的程序打包">https://blog.t-glasswarm.com/2023/12/04/QT/1关于QT与QT for android的安装/关于QT的程序打包/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>版权声明:   </strong>
+      本网站所有文章除特别声明外,均采用 <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">CC BY-NC-ND 4.0</a>
+      许可协议。转载请注明出处!
+    </li>
+  </ul>
+<div>
+      
+    </article>
+    <!-- 上一篇文章和下一篇文章 -->
+    
+      <!-- 文章详情页的上一页和下一页 -->
+<div class="post-nav">
+
+
+
+
+
+  
+  <div class="post-nav-next post-nav-item">
+    <div class="post-nav-img" style="background-size: cover; 
+      background-position: center center;">
+      <img class="lazyload lazyload placeholder" src="https://pic4.zhimg.com/80/v2-83ea273b88e119d9615aed0d89aad4ab_1440w.webp" class="lazyload placeholder" data-srcset="https://pic4.zhimg.com/80/v2-83ea273b88e119d9615aed0d89aad4ab_1440w.webp" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" src="" alt="">
+    </div>
+    <a href="/2023/12/01/%E5%A4%87%E5%BF%98%E5%BD%95/QT/%E6%A7%BD%E4%BF%A1%E5%8F%B7%E7%9A%84%E5%87%BD%E6%95%B0%E9%85%8D%E7%BD%AE/%E6%A7%BD%E4%BF%A1%E5%8F%B7%E7%9A%84%E5%87%BD%E6%95%B0%E9%85%8D%E7%BD%AE/" class="post-nav-link">
+      <div class="title">
+        下一篇: <i class="fas fa-angle-right"></i>
+        <div class="title-text">槽函数</div>
+      </div>
+      <!-- <div class="content">
+        槽函数
+槽函数的创建
+
+
+
+修改UI文件名称，需要修改.ui内的对象名称
+
+
+关于unknow type name……报
+      </div> -->
+    </a>
+  </div>
+
+</div>
+
+    
+    
+
+    <!-- 打赏 -->
+    
+      <div id="appDonate" class="post-donate">
+  <div id="donate_board" class="donate_bar center" ref="donate">
+    <a id="btn_donate" class="btn_donate" href="javascript:;" title="打赏" @click="showDialogDrawer()"></a>
+  </div>
+  <transition name="fade">
+    <div 
+      class="donate-box-mask"
+      v-cloak 
+      v-show="visible"
+      @click="cancelDialogDrawer()"
+    >
+    </div>
+  </transition>
+  <transition name="bounce">
+    <div class="donate-box" v-cloak v-show="visible">
+      <div class="donate-box_close">
+        <i class="fas fa-times" aria-hidden="true" @click="cancelDialogDrawer" pointer></i>
+      </div>
+      <div class="donate-box_title">
+        <h4>
+          你的赏识是我前进的动力
+        </h4>
+      </div>
+      <div class="donate-box_tab">
+        <div class="Alipay" pointer :class="{'active': tabActive === 'Alipay'}" @click="changeTabActive('Alipay')">
+          支付宝
+        </div>
+        <div class="WeChatpay" pointer :class="{'active': tabActive === 'WeChatpay'}" @click="changeTabActive('WeChatpay')">
+          微信
+        </div>
+      </div>
+      <div class="donate-box_img">
+        <div class="AlipayImg" v-show="tabActive === 'Alipay'">
+          <img src="https://pica.zhimg.com/80/v2-61f99f8dcf899f54cad2a1aa28b21e44_1440w.webp" class="lazyload placeholder" data-srcset="https://pica.zhimg.com/80/v2-61f99f8dcf899f54cad2a1aa28b21e44_1440w.webp" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="支付宝打赏" />
+        </div> 
+        <div class="WeChatpayImg" v-show="tabActive === 'WeChatpay'">
+          <img src="https://pic2.zhimg.com/80/v2-29e78b52051ce542adf6d786d61fbd19_1440w.webp" class="lazyload placeholder" data-srcset="https://pic2.zhimg.com/80/v2-29e78b52051ce542adf6d786d61fbd19_1440w.webp" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="微信打赏" />
+        </div>
+      </div>
+    </div>
+  </transition>
+</div>
+
+<script>
+  var body = document.body || document.documentElement || window;
+  var vm = new Vue({
+    el: '#appDonate',
+    data: {
+      visible: false,
+      tabActive: 'Alipay',
+      top: 0,
+    },
+    computed: {
+    },
+    mounted() {
+    },
+    methods: {
+      showDialogDrawer() {
+        this.visible = true;
+        // 防止页面滚动，只能让弹框滚动
+        // function getScroll() {
+        //   return {
+        //     left: window.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft || 0,
+        //     top: window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0
+        //   };
+        // }
+        this.top = $(document).scrollTop() // or getScroll().top
+        // console.log('aa', $('.main-content'));
+        body.style.cssText = 'overflow: hidden;';
+      },
+      cancelDialogDrawer() {
+        this.visible = false;
+        body.removeAttribute('style');
+        $(document).scrollTop(this.top)
+      },
+      changeTabActive(name) {
+        this.tabActive = name;
+      }
+    },
+    created() {}
+  })
 </script>
     
+
+    <!-- 分享 -->
+    
+      <!-- https://github.com/overtrue/share.js -->
+<!-- 文章详情页的分享 -->
+<div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+
+<script src="/js/shareJs/social-share.min.js"></script>
+</script>
+
+<style>
+  .social-share {
+    margin: 20px 0;
+  }
+</style>
+
+
+    
+    
+    <!-- 评论 -->
+    <!-- 评论 -->
+
+  <div id="myComment">
+    
+      <div id="tcomment"></div>
+
+    
   </div>
-  <div class="mask-box"></div>
-</div>
+
+<!-- comment script in themes\hexo-theme-bamboo\layout\_partial\scripts\index.ejs -->
 
 
-
-<div class="tag">
-  <div class="tag-name">
-    <div class="name" style="background-color: #F5EEF8;">备忘录 分类</div>
   </div>
-  <!-- 每一篇文章卡片 -->
-  <!-- hash算法 -->
 
-<section class="posts">
+  <!-- 目录 -->
+  <aside id='l_side'>
   
     
-    <article class="post reveal" style="flex-direction: row-reverse;   ">
-      <div class="post-main">
-        <div class="post-info">
-          <div class="post-time">
-            <i class="fas fa-clock" aria-hidden="true"></i>
-            <span class="post-time">2023-11-22</span>
-          </div>
-          <div class="post-title">
-            <a class="post-title-link" href="/2023/11/22/hexo%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/">hexo常用指令</a>
-          </div>
-          <div class="post-meta">
-            <div class="post-tags">
-              <!-- 文章详情页的标签 -->
-
-    <i class="iconfont icontag"></i>
-    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%A4%87%E5%BF%98%E5%BD%95/" rel="tag">备忘录</a></li></ul>
-
-            </div>
-            <div class="post-categories">
-              <!-- 文章详情页的分类 -->
-
-
-            </div>
-          </div>
-          <div class="post-img-mobile">
-            <a href="/2023/11/22/hexo%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/" style="background-size: cover; 
-              background-position: center center;">
-              <img class="lazyload lazyload placeholder" src="https://picx.zhimg.com/80/v2-9c50d3af0bc62a0e8b6e89e24c769317_1440w.webp" class="lazyload placeholder" data-srcset="https://picx.zhimg.com/80/v2-9c50d3af0bc62a0e8b6e89e24c769317_1440w.webp" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
-            </a>
-          </div>
-          <div class="post-content">
-            hexo常用指令
- hexo new post -p &#x2F;QT&#x2F;“关于QT与QT for android的安装.md”
-
-方便管理_post文件，为_post文件添加子文件
-
-
-
-          </div>
-        </div>
-        <div class="post-more">
-          <a href="/2023/11/22/hexo%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/">
-            <i class="iconfont iconmore" pointer style="float: right;  " title="阅读更多"></i>
-          </a>
-        </div>
-      </div>
-      <div class="post-img">
-        <a href="/2023/11/22/hexo%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/" style="background-size: cover; 
-          background-position: center center;">
-          <img class="lazyload lazyload placeholder" src="https://picx.zhimg.com/80/v2-9c50d3af0bc62a0e8b6e89e24c769317_1440w.webp" class="lazyload placeholder" data-srcset="https://picx.zhimg.com/80/v2-9c50d3af0bc62a0e8b6e89e24c769317_1440w.webp" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+      <section class="widget side_blogger">
+  <div class='content'>
+    
+      
+        <a class='avatar flat-box rectangle' href='/about/'>
+          <img src='/glasswarm/head.jpg'/>
         </a>
+      
+    
+    
+      <div class='text'>
+        
+          <h2>T琉璃T</h2>
+        
+        
+          <p>一只爱笑的猫</p>
+
+        
+        
+          <p><span id="jinrishici-sentence">T琉璃T</span></p>
+          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+        
       </div>
-    </article>
-  
+    
+    
+      <div class="social-wrapper">
+        
+          
+            <a href="/atom.xml"
+              class="social fas fa-rss flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+              
+            </a>
+          
+        
+          
+            <a href="mailto:me@xxx.com"
+              class="social fas fa-envelope flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+              
+            </a>
+          
+        
+          
+            <a href="https://github.com/glasswarm"
+              class="social fab fa-github flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+              
+            </a>
+          
+        
+          
+            <a href="tencent://AddContact/?fromId=50&amp;fromSubId=1&amp;subcmd=all&amp;uin=1412017483你的qq号码"
+              class="social fab fa-qq flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+              
+            </a>
+          
+        
+      </div>
+    
+  </div>
 </section>
+
+    
+  
+  
+  
+
+  <div class="layout_sticky">    
+    
+      
+<section class="widget side_toc">
+  
+  <header>
+    
+      <i style="color: #fff" class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name' style="color: #fff">本文目录</span>
+    
+  </header>
+
+
+  <div class='content'>
+    <div class="toc-main">
+      <div class="toc-content">
+        <!-- <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#QT%E7%9A%84exe%E7%A8%8B%E5%BA%8F%E6%89%93%E5%8C%85%E6%96%B9%E5%BC%8F"><span class="toc-text">QT的exe程序打包方式</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9B%B4%E6%8E%A5%E9%80%89%E6%8B%A9QT%E4%B8%AD%E7%9A%84debug-release%E6%89%93%E5%8C%85%E6%96%B9%E5%BC%8F"><span class="toc-text">直接选择QT中的debug&#x2F;release打包方式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80-%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E6%9D%A5%E8%A7%A3%E5%86%B3%E6%8A%A5%E9%94%99"><span class="toc-text">一.配置环境变量来解决报错</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C-%E4%BD%BF%E7%94%A8QT%E8%87%AA%E5%B8%A6%E7%9A%84cmd%E5%B7%A5%E5%85%B7-%E4%B8%8D%E9%9C%80%E8%A6%81%E7%94%A8%E6%88%B7%E4%B8%8B%E8%BD%BDqt%E5%BA%93"><span class="toc-text">二.使用QT自带的cmd工具(不需要用户下载qt库)</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%B3%E4%BA%8EQT-for-Android%E7%9A%84%E6%89%93%E5%8C%85%E6%96%B9%E6%B3%95"><span class="toc-text">关于QT for Android的打包方法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Android%E6%89%93%E5%8C%85"><span class="toc-text">Android打包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%8C"><span class="toc-text">完</span></a></li></ol></li></ol> -->
+        <div class="toc"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- 手机端目录按钮 -->
+<div id="toc-mobile-btn">
+  <i class="fas fa-list-ul" aria-hidden="true"></i>
 </div>
 
-<div class="w-70">
-  
+      
+  <section class="widget side_recent_post">
+    
+  <header>
+    
+      <a style="color: purple" href='/tags/'><i class="fas fa-book fa-fw" aria-hidden="true"></i><span class='name'>最新文章</span></a>
+    
+  </header>
+
+
+    <div class='content'>
+      
+      <!-- hash算法 -->
+      
+      <div class="aside-list">
+        
+          <div class="aside-list-item">
+            
+            
+            
+
+            <div class="post-img-box">
+              <a href="/2023/12/04/QT/1%E5%85%B3%E4%BA%8EQT%E4%B8%8EQT%20for%20android%E7%9A%84%E5%AE%89%E8%A3%85/%E5%85%B3%E4%BA%8EQT%E7%9A%84%E7%A8%8B%E5%BA%8F%E6%89%93%E5%8C%85/" class="post-img " style="background-size: cover; 
+                background-position: center center;">
+                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="/picture/QT/%E5%85%B3%E4%BA%8EQT%E7%9A%84%E7%A8%8B%E5%BA%8F%E6%89%93%E5%8C%85/theme.png" class="lazyload placeholder" data-srcset="/picture/QT/%E5%85%B3%E4%BA%8EQT%E7%9A%84%E7%A8%8B%E5%BA%8F%E6%89%93%E5%8C%85/theme.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+              </a>
+            </div>
+            <div class="post-date-title">
+              <div>
+                
+                  <span class="post-date">12-04</span>
+                
+              </div>
+              <a class="post-title" href="/2023/12/04/QT/1%E5%85%B3%E4%BA%8EQT%E4%B8%8EQT%20for%20android%E7%9A%84%E5%AE%89%E8%A3%85/%E5%85%B3%E4%BA%8EQT%E7%9A%84%E7%A8%8B%E5%BA%8F%E6%89%93%E5%8C%85/">关于QT的程序打包</a>
+            </div>
+          </div>
+        
+          <div class="aside-list-item">
+            
+            
+            
+
+            <div class="post-img-box">
+              <a href="/2023/12/01/%E5%A4%87%E5%BF%98%E5%BD%95/QT/%E6%A7%BD%E4%BF%A1%E5%8F%B7%E7%9A%84%E5%87%BD%E6%95%B0%E9%85%8D%E7%BD%AE/%E6%A7%BD%E4%BF%A1%E5%8F%B7%E7%9A%84%E5%87%BD%E6%95%B0%E9%85%8D%E7%BD%AE/" class="post-img " style="background-size: cover; 
+                background-position: center center;">
+                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="https://pic4.zhimg.com/80/v2-83ea273b88e119d9615aed0d89aad4ab_1440w.webp" class="lazyload placeholder" data-srcset="https://pic4.zhimg.com/80/v2-83ea273b88e119d9615aed0d89aad4ab_1440w.webp" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+              </a>
+            </div>
+            <div class="post-date-title">
+              <div>
+                
+                  <span class="post-date">12-01</span>
+                
+              </div>
+              <a class="post-title" href="/2023/12/01/%E5%A4%87%E5%BF%98%E5%BD%95/QT/%E6%A7%BD%E4%BF%A1%E5%8F%B7%E7%9A%84%E5%87%BD%E6%95%B0%E9%85%8D%E7%BD%AE/%E6%A7%BD%E4%BF%A1%E5%8F%B7%E7%9A%84%E5%87%BD%E6%95%B0%E9%85%8D%E7%BD%AE/">槽函数</a>
+            </div>
+          </div>
+        
+          <div class="aside-list-item">
+            
+            
+            
+
+            <div class="post-img-box">
+              <a href="/2023/11/23/QT/1%E5%85%B3%E4%BA%8EQT%E4%B8%8EQT%20for%20android%E7%9A%84%E5%AE%89%E8%A3%85/%E5%85%B3%E4%BA%8EQT%E4%B8%8EQT%20for%20android%E7%9A%84%E5%AE%89%E8%A3%85%EF%BC%88%E4%BA%8C%EF%BC%89/" class="post-img " style="background-size: cover; 
+                background-position: center center;">
+                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="/picture/QT/%E5%85%B3%E4%BA%8EQT%E4%B8%8Eandroid%E7%9A%84%E5%AE%89%E8%A3%85(%E4%BA%8C)/theme.png" class="lazyload placeholder" data-srcset="/picture/QT/%E5%85%B3%E4%BA%8EQT%E4%B8%8Eandroid%E7%9A%84%E5%AE%89%E8%A3%85(%E4%BA%8C)/theme.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+              </a>
+            </div>
+            <div class="post-date-title">
+              <div>
+                
+                  <span class="post-date">11-23</span>
+                
+              </div>
+              <a class="post-title" href="/2023/11/23/QT/1%E5%85%B3%E4%BA%8EQT%E4%B8%8EQT%20for%20android%E7%9A%84%E5%AE%89%E8%A3%85/%E5%85%B3%E4%BA%8EQT%E4%B8%8EQT%20for%20android%E7%9A%84%E5%AE%89%E8%A3%85%EF%BC%88%E4%BA%8C%EF%BC%89/">关于QT与QT for Android的安装（二）</a>
+            </div>
+          </div>
+        
+          <div class="aside-list-item">
+            
+            
+            
+
+            <div class="post-img-box">
+              <a href="/2023/11/22/QT/1%E5%85%B3%E4%BA%8EQT%E4%B8%8EQT%20for%20android%E7%9A%84%E5%AE%89%E8%A3%85/%E5%85%B3%E4%BA%8EQT%E4%B8%8EQT%20for%20android%E7%9A%84%E5%AE%89%E8%A3%85%EF%BC%88%E4%B8%80%EF%BC%89/" class="post-img " style="background-size: cover; 
+                background-position: center center;">
+                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="/picture/QT/%E5%85%B3%E4%BA%8EQT%E4%B8%8Eandroid%E7%9A%84%E5%AE%89%E8%A3%85(%E4%B8%80)/theme.png" class="lazyload placeholder" data-srcset="/picture/QT/%E5%85%B3%E4%BA%8EQT%E4%B8%8Eandroid%E7%9A%84%E5%AE%89%E8%A3%85(%E4%B8%80)/theme.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+              </a>
+            </div>
+            <div class="post-date-title">
+              <div>
+                
+                  <span class="post-date">11-22</span>
+                
+              </div>
+              <a class="post-title" href="/2023/11/22/QT/1%E5%85%B3%E4%BA%8EQT%E4%B8%8EQT%20for%20android%E7%9A%84%E5%AE%89%E8%A3%85/%E5%85%B3%E4%BA%8EQT%E4%B8%8EQT%20for%20android%E7%9A%84%E5%AE%89%E8%A3%85%EF%BC%88%E4%B8%80%EF%BC%89/">关于QT与QT for Android的安装（一）</a>
+            </div>
+          </div>
+        
+          <div class="aside-list-item">
+            
+            
+            
+
+            <div class="post-img-box">
+              <a href="/2023/11/22/hexo%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/" class="post-img " style="background-size: cover; 
+                background-position: center center;">
+                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="https://picx.zhimg.com/80/v2-9c50d3af0bc62a0e8b6e89e24c769317_1440w.webp" class="lazyload placeholder" data-srcset="https://picx.zhimg.com/80/v2-9c50d3af0bc62a0e8b6e89e24c769317_1440w.webp" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+              </a>
+            </div>
+            <div class="post-date-title">
+              <div>
+                
+                  <span class="post-date">11-22</span>
+                
+              </div>
+              <a class="post-title" href="/2023/11/22/hexo%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/">hexo常用指令</a>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+  </section>
+
+    
+  </div>
+</aside>
+
+  <!-- 图片放大 Wrap images with fancybox support -->
+  <script src="/js/wrapImage.js"></script>
 </div>
+
+<!-- 文章详情页背景图 -->
+<div id="appBgSwiper" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -2;"
+	:style="{'background-color': bgColor ? bgColor : 'transparent'}">
+	<transition-group tag="ul" :name="names">
+		<li v-for='(image,index) in img' :key='index' v-show="index === mark" class="bg-swiper-box">
+			<img :src="image" class="bg-swiper-img no-lazy">
+		</li>
+	</transition-group>
+</div>
+<script>
+	var vm = new Vue({
+		el: '#appBgSwiper',
+		data: {
+			names: '' || 'fade' || 'fade', // translate-fade fade
+			mark: 0,
+			img: [],
+			bgColor: '',
+			time: null
+		},
+		methods: {   //添加方法
+			change(i, m) {
+				if (i > m) {
+					// this.names = 'fade';
+				} else if (i < m) {
+					// this.names = 'fade';
+				} else {
+					return;
+				}
+				this.mark = i;
+			},
+			prev() {
+				// this.names = 'fade';
+				this.mark--;
+				if (this.mark === -1) {
+					this.mark = 3;
+					return
+				}
+			},
+			next() {
+				// this.names = 'fade';
+				this.mark++;
+				if (this.mark === this.img.length) {
+					this.mark = 0;
+					return
+				}
+			},
+			autoPlay() {
+				// this.names = 'fade';
+				this.mark++;
+				if (this.mark === this.img.length) {
+					this.mark = 0;
+					return
+				}
+			},
+			play() {
+				let bgImgDelay = '' || '180000'
+				let delay = parseInt(bgImgDelay) || 180000;
+				this.time = setInterval(this.autoPlay, delay);
+			},
+			enter() {
+				clearInterval(this.time);
+			},
+			leave() {
+				this.play();
+			}
+		},
+		created() {
+			this.play()
+		},
+		beforeDestroy() {
+			clearInterval(this.time);
+		},
+		mounted() {
+			let prop = '/glasswarm/body.png' || '';
+			let isImg = prop.includes('.bmp') || prop.includes('.jpg') || prop.includes('.png') || prop.includes('.tif') || prop.includes('.gif') || prop.includes('.pcx') || prop.includes('.tga') || prop.includes('.exif') || prop.includes('.fpx') || prop.includes('.psd') || prop.includes('.cdr') || prop.includes('.pcd') || prop.includes('.dxf') || prop.includes('.ufo') || prop.includes('.eps') || prop.includes('.ai') || prop.includes('.raw') || prop.includes('.WMF') || prop.includes('.webp') || prop.includes('.jpeg') || prop.includes('http://') || prop.includes('https://')
+			if (isImg) {
+				let img = prop.split(',');
+				let configRoot = '/'
+				let arrImg = [];
+				img.forEach(el => {
+					var Expression = /http(s)?:\/\/([\w-]+\.)+[\w-]+(\/[\w- .\/?%&=]*)?/;
+					var objExp = new RegExp(Expression);
+
+					if (objExp.test(el)) {
+						// http or https
+						arrImg.push(el);
+					} else {
+						// 非http or https开头
+						// 本地文件
+						let firstStr = el.charAt(0);
+						if (firstStr == '/') {
+							el = el.substr(1); // 删除第一个字符 '/',因为 configRoot最后一个字符为 /
+						}
+						el = configRoot + el;
+						arrImg.push(el);
+					}
+				})
+				this.img = arrImg;
+			} else {
+				this.bgColor = prop;
+			}
+		}
+	})
+</script>
+
+<style>
+	.bg-swiper-box {
+		position: absolute;
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+
+	.bg-swiper-img {
+		object-fit: cover;
+		width: 100%;
+		height: 100%;
+	}
+</style>
+
+
+
+
+  <script>
+  function loadMermaid() {
+    if (document.getElementsByClassName('mermaid').length) {
+      if (window.mermaidJsLoad) mermaid.init()
+      else {
+        loadScript('https://unpkg.com/mermaid/dist/mermaid.min.js').then(() => {
+          window.mermaidJsLoad = true
+          mermaid.initialize({
+            theme: 'default',
+          })
+          if ('true') {
+            mermaid.init();
+          }
+        })
+      }
+    }
+  };
+  document.addEventListener("DOMContentLoaded", function () {
+    loadMermaid();
+  })
+
+  document.addEventListener('pjax:complete', function () {
+    loadMermaid();
+  })
+  
+</script>
+
 
       </main>
     </div>
