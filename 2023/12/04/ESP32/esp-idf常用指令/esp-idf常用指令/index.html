@@ -11,7 +11,7 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-  <title>gallery | T琉璃T</title>
+  <title>esp-idf常用指令 | T琉璃T</title>
 
   <link rel="icon" type="image/jpeg" href="/glasswarm/head.jpg">
   <link rel="stylesheet" href="https://at.alicdn.com/t/font_1911880_c1nvbyezg17.css">
@@ -598,17 +598,39 @@
 
 
 <div class="post-detail-header" id="thumbnail_canvas" style="background-repeat: no-repeat; background-size: cover; 
-  background-position: center center;position: relative;background-image:url('https://pic4.zhimg.com/80/v2-83ea273b88e119d9615aed0d89aad4ab_1440w.webp')">
+  background-position: center center;position: relative;background-image:url('/picture/ESP32/esp-idf%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/theme.png')">
   <div class="post-detail-header-mask"></div>
   <canvas id="header_canvas"style="position:absolute;bottom:0;pointer-events:none;"></canvas>
   
   <div class="post-detail-header_info-box">
     <div class="title-box">
       <span class="title">
-        gallery
+        esp-idf常用指令
       </span>
     </div>
     
+    
+      
+        <span class="post-detail-header_date">
+          <i class="fas fa-calendar"></i> 发表于：2023-12-04 |
+        </span>
+      
+
+      
+
+      
+        <div class="post-detail-header_wordcount">
+          <span class="totalcount">
+            <i class="fas fa-file-text-o"></i> 字数统计: 107 |
+          </span>
+  
+          <span class="min2read">
+            <i class="fas fa-clock"></i> 阅读时长: 1分钟 |
+          </span>
+  
+          
+        </div>
+      
     
   </div>
   
@@ -626,9 +648,50 @@
   <div class="main-content">
     <article class="post post-detail">
       <div class="post-content">
-        
+        <blockquote>
+<p><strong><font size="4">清除之前的编译结果</font></strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">idf.py fullclean</span><br></pre></td></tr></table></figure>
+</blockquote>
+<blockquote>
+<p><strong><font size="4">打开串口监视器</font></strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">idf.py -p COMx monitor</span><br></pre></td></tr></table></figure>
+</blockquote>
+<blockquote>
+<p><strong><font size="4">向串口烧录固件</font></strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">idf.py -p COMx flash</span><br></pre></td></tr></table></figure>
+</blockquote>
+<blockquote>
+<p><strong><font size="4">项目编译</font></strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">idf.py build</span><br></pre></td></tr></table></figure>
+</blockquote>
+<blockquote>
+<p><strong><font size="4">配置菜单</font></strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">idf.py menuconfig</span><br></pre></td></tr></table></figure>
+</blockquote>
+<blockquote>
+<p><strong><font size="4">选择esp32芯片型号</font></strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">idf.py set-target esp32</span><br></pre></td></tr></table></figure>
+<p><strong><font size="4">不输入参数的话，会列出所有可用型号</font></strong></p>
+</blockquote>
+<blockquote>
+<p><strong><font size="4">项目编译+烧录</font></strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">idf.py build flash</span><br></pre></td></tr></table></figure>
+</blockquote>
+<blockquote>
+<p><strong><font size="4">项目编译+烧录并打开串口监视器</font></strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">idf.py build flash monitor</span><br></pre></td></tr></table></figure>
+</blockquote>
+
       </div>
       <div class="post-tags-categories">
+        
+        <div class="tags">
+          
+            <a href="/tags/ESP32/" class="">
+              ESP32
+            </a>
+          
+        </div>
         
       </div>
       
@@ -639,7 +702,7 @@
     </li>
     <li class="post-copyright-link">
     <strong>文章链接:  </strong>
-    <a href="/gallery/index.html" target="_blank" title="gallery">https://blog.t-glasswarm.com/gallery/index.html</a>
+    <a href="/2023/12/04/ESP32/esp-idf常用指令/esp-idf常用指令/" target="_blank" title="esp-idf常用指令">https://blog.t-glasswarm.com/2023/12/04/ESP32/esp-idf常用指令/esp-idf常用指令/</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明:   </strong>
@@ -657,7 +720,44 @@
 
 
 
+  
+  <div class="post-nav-prev post-nav-item">
+    <div class="post-nav-img" style="background-size: cover; 
+      background-position: center center;">
+      <img class="lazyload lazyload placeholder" src="/picture/ESP32/esp-idf%E9%A1%B9%E7%9B%AE%E6%B7%BB%E5%8A%A0.c.h%E6%96%87%E4%BB%B6%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E6%B3%95/theme.png" class="lazyload placeholder" data-srcset="/picture/ESP32/esp-idf%E9%A1%B9%E7%9B%AE%E6%B7%BB%E5%8A%A0.c.h%E6%96%87%E4%BB%B6%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E6%B3%95/theme.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+    </div>
+    <a href="/2023/12/05/ESP32/esp-idf%E9%A1%B9%E7%9B%AE%E6%B7%BB%E5%8A%A0.c.h%E6%96%87%E4%BB%B6%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E6%B3%95/esp-idf%E9%A1%B9%E7%9B%AE%E6%B7%BB%E5%8A%A0.c.h%E6%96%87%E4%BB%B6%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E6%B3%95/" class="post-nav-link">
+      <div class="title">
+        <i class="fas fa-angle-left"></i> 上一篇:
+        <div class="title-text">esp-idf项目添加.c.h文件的三种方法</div>
+      </div>
+      
+      <!-- <div class="content">
+        esp-idf项目添加.c.h文件的三种方法第一种方法,直接在main文件夹里添加
+例如,原本目录这样123456- u
+      </div> -->
+    </a>
+  </div>
 
+
+
+  
+  <div class="post-nav-next post-nav-item">
+    <div class="post-nav-img" style="background-size: cover; 
+      background-position: center center;">
+      <img class="lazyload lazyload placeholder" src="/picture/%E5%85%B3%E4%BA%8EGitHub%E4%B8%8A%E4%BC%A0%E4%BB%A3%E7%A0%81/theme.png" class="lazyload placeholder" data-srcset="/picture/%E5%85%B3%E4%BA%8EGitHub%E4%B8%8A%E4%BC%A0%E4%BB%A3%E7%A0%81/theme.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" src="" alt="">
+    </div>
+    <a href="/2023/12/04/%E5%85%B3%E4%BA%8EGitHub%E4%B8%8A%E4%BC%A0%E4%BB%A3%E7%A0%81/%E5%85%B3%E4%BA%8EGitHub%E4%B8%8A%E4%BC%A0%E4%BB%A3%E7%A0%81/" class="post-nav-link">
+      <div class="title">
+        下一篇: <i class="fas fa-angle-right"></i>
+        <div class="title-text">关于GitHub上传代码</div>
+      </div>
+      <!-- <div class="content">
+        建立GitHub的ssh密钥建立GitHub的ssh密钥
+找到 c盘-&gt;用户-&gt;你的账户-&gt;.shh 
+      </div> -->
+    </a>
+  </div>
 
 </div>
 
@@ -863,27 +963,29 @@
   <div class="layout_sticky">    
     
       
-        
+<section class="widget side_toc">
   
-      
-      
-        
-<section class="widget side_tagcloud">
-    
   <header>
     
-      <a style="color: " href='/tags/'><i class="fas fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
+      <i style="color: #fff" class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name' style="color: #fff">本文目录</span>
     
   </header>
 
 
-    <div class='content'>
-    <a href="/tags/ESP32/" style="font-size: 19px; color: #777">ESP32</a> <a href="/tags/QT/" style="font-size: 24px; color: #555">QT</a> <a href="/tags/%E5%85%B3%E4%BA%8EGitHub%E4%B8%8A%E4%BC%A0%E4%BB%A3%E7%A0%81/" style="font-size: 14px; color: #999">关于GitHub上传代码</a> <a href="/tags/%E7%A0%B4%E7%AB%99%E6%84%9F%E8%A8%80/" style="font-size: 14px; color: #999">破站感言</a> <a href="/tags/%E7%BB%99%E8%87%AA%E5%B7%B1%E7%9C%8B%E7%9A%84%E5%A4%87%E5%BF%98%E5%BD%95/" style="font-size: 19px; color: #777">给自己看的备忘录</a>
+  <div class='content'>
+    <div class="toc-main">
+      <div class="toc-content">
+        <!--  -->
+        <div class="toc"></div>
+      </div>
     </div>
+  </div>
 </section>
+<!-- 手机端目录按钮 -->
+<div id="toc-mobile-btn">
+  <i class="fas fa-list-ul" aria-hidden="true"></i>
+</div>
 
-  
-      
       
   <section class="widget side_recent_post">
     
@@ -1009,134 +1111,6 @@
     </div>
   </section>
 
-      
-  <section class="widget side_archives">
-    
-    <header><a style="color: red" href='/archives/'><i class="fas fa-archive fa-fw" aria-hidden="true"></i><span class='name'>归档</span></a></header><div class="content"><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/12/"><span class="card-archive-list-date">十二月 2023</span><span class="card-archive-list-count">5</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/11/"><span class="card-archive-list-date">十一月 2023</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/09/"><span class="card-archive-list-date">九月 2023</span><span class="card-archive-list-count">1</span></a></li></ul></div>
-  </section>
-
-      <section class="widget side_webinfo">
-  
-  <header>
-    
-      <i style="color: " class="fas fa-chart-line fa-fw" aria-hidden="true"></i><span class='name' style="color: ">站点信息</span>
-    
-  </header>
-
-
-  <div class='content'>
-    <div class="webinfo">
-      
-        <div class="webinfo-item">
-          <div>文章数目：</div>
-          <div>9 篇</div>
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>已运行时间：</div>
-          <div id="webinfo-runtime-count" publish_date="03/24/2020 21:34:09"></div>
-        </div>
-        <script>
-          var BirthDay = new Date(new Date('2023/09/09'));
-          var today = new Date();
-          var timeold = (today.getTime() - BirthDay.getTime());
-          var daysold = Math.floor(timeold / (24 * 60 * 60 * 1000));
-          document.getElementById('webinfo-runtime-count').innerHTML = daysold + ' 天';
-        </script>
-      
-
-
-      
-        <div class="webinfo-item">
-          <div>本站总字数：</div>
-          <div>3k 字</div>
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>本站访客数：</div>
-          
-          <div><span id="busuanzi_value_site_uv"><i class="fas fa-fan fa-spin fa-fw" aria-hidden="true"></i></span> 人</div>
-          
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>本站总访问量：</div>
-          
-          <div><span id="busuanzi_value_site_pv"><i class="fas fa-fan fa-spin fa-fw" aria-hidden="true"></i></span> 次</div>
-          
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>最后活动时间：</div>
-          
-            <div id="last-update" style="display: none;">Tue Dec 05 2023 17:03:07 GMT+0800 (China Standard Time)</div>
-            <div id="last-update-show">2023-12-05 日</div>
-          
-        </div>
-        
-        <script>
-          function timeago(dateTimeStamp) {
-              var minute = 1000 * 60; //把分，时，天，周，半个月，一个月用毫秒表示
-              var hour = minute * 60;
-              var day = hour * 24;
-              var week = day * 7;
-              var month = day * 30;
-              var now = new Date().getTime(); //获取当前时间毫秒
-              var diffValue = now - dateTimeStamp; //时间差
-              if (diffValue < 0) {
-                  return;
-              }
-              var minC = diffValue / minute; //计算时间差的分，时，天，周，月
-              var hourC = diffValue / hour;
-              var dayC = diffValue / day;
-              var weekC = diffValue / week;
-              var monthC = diffValue / month;
-              if (monthC >= 1 && monthC <= 3) {
-                  result = " " + parseInt(monthC) + " 月前"
-              } else if (weekC >= 1 && weekC <= 3) {
-                  result = " " + parseInt(weekC) + " 周前"
-              } else if (dayC >= 1 && dayC <= 6) {
-                  result = " " + parseInt(dayC) + " 天前"
-              } else if (hourC >= 1 && hourC <= 23) {
-                  result = " " + parseInt(hourC) + " 小时前"
-              } else if (minC >= 1 && minC <= 59) {
-                  result = " " + parseInt(minC) + " 分钟前"
-              } else if (diffValue >= 0 && diffValue <= minute) {
-                  result = "刚刚"
-              } else {
-                  var datetime = new Date();
-                  datetime.setTime(dateTimeStamp);
-                  var Nyear = datetime.getFullYear();
-                  var Nmonth = datetime.getMonth() + 1 < 10 ? "0" + (datetime.getMonth() + 1) : datetime.getMonth() + 1;
-                  var Ndate = datetime.getDate() < 10 ? "0" + datetime.getDate() : datetime.getDate();
-                  var Nhour = datetime.getHours() < 10 ? "0" + datetime.getHours() : datetime.getHours();
-                  var Nminute = datetime.getMinutes() < 10 ? "0" + datetime.getMinutes() : datetime.getMinutes();
-                  var Nsecond = datetime.getSeconds() < 10 ? "0" + datetime.getSeconds() : datetime.getSeconds();
-                  result = Nyear + "-" + Nmonth + "-" + Ndate
-              }
-              return result;
-          }
-          var lastUpDate = document.getElementById('last-update').innerHTML;
-          try {
-            document.getElementById('last-update-show').innerHTML = timeago(new Date(lastUpDate));
-          } catch (error) {
-            document.getElementById('last-update-show').innerHTML = '2023-12-05 日';
-          }
-        </script>
-        
-      
-    </div>
-  </div>
-</section>
-      
     
   </div>
 </aside>
@@ -1218,7 +1192,7 @@
 			clearInterval(this.time);
 		},
 		mounted() {
-			let prop = '' || '';
+			let prop = '/glasswarm/body.png' || '';
 			let isImg = prop.includes('.bmp') || prop.includes('.jpg') || prop.includes('.png') || prop.includes('.tif') || prop.includes('.gif') || prop.includes('.pcx') || prop.includes('.tga') || prop.includes('.exif') || prop.includes('.fpx') || prop.includes('.psd') || prop.includes('.cdr') || prop.includes('.pcd') || prop.includes('.dxf') || prop.includes('.ufo') || prop.includes('.eps') || prop.includes('.ai') || prop.includes('.raw') || prop.includes('.WMF') || prop.includes('.webp') || prop.includes('.jpeg') || prop.includes('http://') || prop.includes('https://')
 			if (isImg) {
 				let img = prop.split(',');
