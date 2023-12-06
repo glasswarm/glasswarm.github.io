@@ -11,7 +11,7 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-  <title>破站感言 | T琉璃T</title>
+  <title>esp-idf中examples内softAP例程的main.c移植为components组件，编译提示找不到esp_wifi.h报错 | T琉璃T</title>
 
   <link rel="icon" type="image/jpeg" href="/glasswarm/head.jpg">
   <link rel="stylesheet" href="https://at.alicdn.com/t/font_1911880_c1nvbyezg17.css">
@@ -598,21 +598,21 @@
 
 
 <div class="post-detail-header" id="thumbnail_canvas" style="background-repeat: no-repeat; background-size: cover; 
-  background-position: center center;position: relative;background-image:url('/glasswarm/about.png')">
+  background-position: center center;position: relative;background-image:url('/picture/ESP32/esp-idf%E4%B8%ADexamples%E5%86%85wifiAP%E7%9A%84main.c%E7%A7%BB%E6%A4%8D%E4%B8%BAcomponents%E7%BB%84%E4%BB%B6%EF%BC%8C%E7%BC%96%E8%AF%91%E6%8F%90%E7%A4%BA%E6%89%BE%E4%B8%8D%E5%88%B0esp_wifi.h%E6%8A%A5%E9%94%99/theme.png')">
   <div class="post-detail-header-mask"></div>
   <canvas id="header_canvas"style="position:absolute;bottom:0;pointer-events:none;"></canvas>
   
   <div class="post-detail-header_info-box">
     <div class="title-box">
       <span class="title">
-        破站感言
+        esp-idf中examples内softAP例程的main.c移植为components组件，编译提示找不到esp_wifi.h报错
       </span>
     </div>
     
     
       
         <span class="post-detail-header_date">
-          <i class="fas fa-calendar"></i> 发表于：2023-09-09 |
+          <i class="fas fa-calendar"></i> 发表于：2023-12-06 |
         </span>
       
 
@@ -621,7 +621,7 @@
       
         <div class="post-detail-header_wordcount">
           <span class="totalcount">
-            <i class="fas fa-file-text-o"></i> 字数统计: 127 |
+            <i class="fas fa-file-text-o"></i> 字数统计: 51 |
           </span>
   
           <span class="min2read">
@@ -652,17 +652,21 @@
   <div class="main-content">
     <article class="post post-detail">
       <div class="post-content">
-        <h1 id="关于破站感言"><a href="#关于破站感言" class="headerlink" title="关于破站感言"></a>关于破站感言</h1><blockquote>
-<p><font size="4"><strong>总之,这是第一次建立了属于自己的博客,感觉心里倍感骄傲hh,之后我会把如何在linux和windows上使用hexo建站的感悟都分享给大家</strong></font><br><br><font size="4"><strong>还有是打算把自己以前学过的知识分享出来，同时这个博客也可以给自己当做一个备忘录ww</strong></font><br><br><font size="4"><strong>接下来我打算做一个有关于智能车的无线图传，并把它开源出来供大家使用</strong></font></p>
-</blockquote>
+        <h1 id="esp-idf提示找不到esp-wifi-h报错"><a href="#esp-idf提示找不到esp-wifi-h报错" class="headerlink" title="esp-idf提示找不到esp_wifi.h报错"></a>esp-idf提示找不到esp_wifi.h报错</h1><h2 id="报错如下"><a href="#报错如下" class="headerlink" title="报错如下"></a>报错如下</h2><p><img src="/picture/ESP32/esp-idf%E4%B8%ADexamples%E5%86%85wifiAP%E7%9A%84main.c%E7%A7%BB%E6%A4%8D%E4%B8%BAcomponents%E7%BB%84%E4%BB%B6%EF%BC%8C%E7%BC%96%E8%AF%91%E6%8F%90%E7%A4%BA%E6%89%BE%E4%B8%8D%E5%88%B0esp_wifi.h%E6%8A%A5%E9%94%99/1.png" class="lazyload placeholder" data-srcset="/picture/ESP32/esp-idf%E4%B8%ADexamples%E5%86%85wifiAP%E7%9A%84main.c%E7%A7%BB%E6%A4%8D%E4%B8%BAcomponents%E7%BB%84%E4%BB%B6%EF%BC%8C%E7%BC%96%E8%AF%91%E6%8F%90%E7%A4%BA%E6%89%BE%E4%B8%8D%E5%88%B0esp_wifi.h%E6%8A%A5%E9%94%99/1.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="报错如图"></p>
+<ul>
+<li><p><strong><font size="4">将你的user_components组件内的CMakelists.txt由原来的</font></strong><br><img src="/picture/ESP32/esp-idf%E4%B8%ADexamples%E5%86%85wifiAP%E7%9A%84main.c%E7%A7%BB%E6%A4%8D%E4%B8%BAcomponents%E7%BB%84%E4%BB%B6%EF%BC%8C%E7%BC%96%E8%AF%91%E6%8F%90%E7%A4%BA%E6%89%BE%E4%B8%8D%E5%88%B0esp_wifi.h%E6%8A%A5%E9%94%99/2.png" class="lazyload placeholder" data-srcset="/picture/ESP32/esp-idf%E4%B8%ADexamples%E5%86%85wifiAP%E7%9A%84main.c%E7%A7%BB%E6%A4%8D%E4%B8%BAcomponents%E7%BB%84%E4%BB%B6%EF%BC%8C%E7%BC%96%E8%AF%91%E6%8F%90%E7%A4%BA%E6%89%BE%E4%B8%8D%E5%88%B0esp_wifi.h%E6%8A%A5%E9%94%99/2.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="原来的代码"></p>
+</li>
+<li><p><strong><font size="4">增加(<span class='p warning'>PRIV_REQUIRES</span>&#x2F;<span class='p warning'>REQUIRES</span>) + 你的组件名，组件名在(<span class='p warning'>EDP-IDF安装路径/components/组件名</span>)</font></strong><br><img src="/picture/ESP32/esp-idf%E4%B8%ADexamples%E5%86%85wifiAP%E7%9A%84main.c%E7%A7%BB%E6%A4%8D%E4%B8%BAcomponents%E7%BB%84%E4%BB%B6%EF%BC%8C%E7%BC%96%E8%AF%91%E6%8F%90%E7%A4%BA%E6%89%BE%E4%B8%8D%E5%88%B0esp_wifi.h%E6%8A%A5%E9%94%99/3.png" class="lazyload placeholder" data-srcset="/picture/ESP32/esp-idf%E4%B8%ADexamples%E5%86%85wifiAP%E7%9A%84main.c%E7%A7%BB%E6%A4%8D%E4%B8%BAcomponents%E7%BB%84%E4%BB%B6%EF%BC%8C%E7%BC%96%E8%AF%91%E6%8F%90%E7%A4%BA%E6%89%BE%E4%B8%8D%E5%88%B0esp_wifi.h%E6%8A%A5%E9%94%99/3.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="修改后的代码"></p>
+</li>
+</ul>
 
       </div>
       <div class="post-tags-categories">
         
         <div class="tags">
           
-            <a href="/tags/%E7%A0%B4%E7%AB%99%E6%84%9F%E8%A8%80/" class="">
-              破站感言
+            <a href="/tags/ESP32/" class="">
+              ESP32
             </a>
           
         </div>
@@ -676,7 +680,7 @@
     </li>
     <li class="post-copyright-link">
     <strong>文章链接:  </strong>
-    <a href="/2023/09/09/hello-world/" target="_blank" title="破站感言">https://blog.t-glasswarm.com/2023/09/09/hello-world/</a>
+    <a href="/2023/12/06/ESP32/esp-idf中examples内wifiAP的main.c移植为components组件，编译提示找不到esp_wifi.h报错/esp-idf中examples内wifiAP的main.c移植为components组件，编译提示找不到esp_wifi.h报错/" target="_blank" title="esp-idf中examples内softAP例程的main.c移植为components组件，编译提示找不到esp_wifi.h报错">https://blog.t-glasswarm.com/2023/12/06/ESP32/esp-idf中examples内wifiAP的main.c移植为components组件，编译提示找不到esp_wifi.h报错/esp-idf中examples内wifiAP的main.c移植为components组件，编译提示找不到esp_wifi.h报错/</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明:   </strong>
@@ -694,27 +698,25 @@
 
 
 
+
+
   
-  <div class="post-nav-prev post-nav-item">
+  <div class="post-nav-next post-nav-item">
     <div class="post-nav-img" style="background-size: cover; 
       background-position: center center;">
-      <img class="lazyload lazyload placeholder" src="https://picx.zhimg.com/80/v2-9c50d3af0bc62a0e8b6e89e24c769317_1440w.webp" class="lazyload placeholder" data-srcset="https://picx.zhimg.com/80/v2-9c50d3af0bc62a0e8b6e89e24c769317_1440w.webp" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+      <img class="lazyload lazyload placeholder" src="/picture/ESP32/esp-idf%E9%A1%B9%E7%9B%AE%E6%B7%BB%E5%8A%A0.c.h%E6%96%87%E4%BB%B6%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E6%B3%95/theme.png" class="lazyload placeholder" data-srcset="/picture/ESP32/esp-idf%E9%A1%B9%E7%9B%AE%E6%B7%BB%E5%8A%A0.c.h%E6%96%87%E4%BB%B6%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E6%B3%95/theme.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" src="" alt="">
     </div>
-    <a href="/2023/11/22/hexo%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/" class="post-nav-link">
+    <a href="/2023/12/05/ESP32/esp-idf%E9%A1%B9%E7%9B%AE%E6%B7%BB%E5%8A%A0.c.h%E6%96%87%E4%BB%B6%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E6%B3%95/esp-idf%E9%A1%B9%E7%9B%AE%E6%B7%BB%E5%8A%A0.c.h%E6%96%87%E4%BB%B6%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E6%B3%95/" class="post-nav-link">
       <div class="title">
-        <i class="fas fa-angle-left"></i> 上一篇:
-        <div class="title-text">hexo常用指令</div>
+        下一篇: <i class="fas fa-angle-right"></i>
+        <div class="title-text">esp-idf项目添加.c.h文件的三种方法</div>
       </div>
-      
       <!-- <div class="content">
-        hexo常用指令
-方便管理_post文件，为_post文件添加子文件__
-1hexo new post -p /QT/&
+        esp-idf项目添加.c.h文件的三种方法第一种方法,直接在main文件夹里添加
+例如,原本目录这样123456- u
       </div> -->
     </a>
   </div>
-
-
 
 </div>
 
@@ -932,7 +934,7 @@
   <div class='content'>
     <div class="toc-main">
       <div class="toc-content">
-        <!-- <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%B3%E4%BA%8E%E7%A0%B4%E7%AB%99%E6%84%9F%E8%A8%80"><span class="toc-text">关于破站感言</span></a></li></ol> -->
+        <!-- <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#esp-idf%E6%8F%90%E7%A4%BA%E6%89%BE%E4%B8%8D%E5%88%B0esp-wifi-h%E6%8A%A5%E9%94%99"><span class="toc-text">esp-idf提示找不到esp_wifi.h报错</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8A%A5%E9%94%99%E5%A6%82%E4%B8%8B"><span class="toc-text">报错如下</span></a></li></ol></li></ol> -->
         <div class="toc"></div>
       </div>
     </div>
