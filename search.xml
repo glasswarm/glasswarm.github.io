@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>关于QT的一些备忘录</title>
+      <link href="/2023/12/11/%E5%A4%87%E5%BF%98%E5%BD%95/QT/%E6%A7%BD%E4%BF%A1%E5%8F%B7%E7%9A%84%E5%87%BD%E6%95%B0%E9%85%8D%E7%BD%AE/QT%E5%A4%87%E5%BF%98%E5%BD%95/"/>
+      <url>/2023/12/11/%E5%A4%87%E5%BF%98%E5%BD%95/QT/%E6%A7%BD%E4%BF%A1%E5%8F%B7%E7%9A%84%E5%87%BD%E6%95%B0%E9%85%8D%E7%BD%AE/QT%E5%A4%87%E5%BF%98%E5%BD%95/</url>
+      
+        <content type="html"><![CDATA[<h1 id="槽函数"><a href="#槽函数" class="headerlink" title="槽函数"></a>槽函数</h1><ul><li><strong><font size="4">槽函数的创建</font></strong></li></ul><p><img src="/picture/%E5%A4%87%E5%BF%98%E5%BD%95/QT/QT%E5%A4%87%E5%BF%98%E5%BD%95/%E6%A7%BD%E5%87%BD%E6%95%B0%E7%9A%84%E5%88%9B%E5%BB%BA.png" class="lazyload placeholder" data-srcset="/picture/%E5%A4%87%E5%BF%98%E5%BD%95/QT/QT%E5%A4%87%E5%BF%98%E5%BD%95/%E6%A7%BD%E5%87%BD%E6%95%B0%E7%9A%84%E5%88%9B%E5%BB%BA.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="槽函数的创建"></p><ul><li><strong><font size="4">修改UI文件名称，需要修改.ui内的对象名称</font></strong><br><img src="/picture/%E5%A4%87%E5%BF%98%E5%BD%95/QT/QT%E5%A4%87%E5%BF%98%E5%BD%95/%E4%BF%AE%E6%94%B9UI%E7%9A%84%E5%90%8D%E7%A7%B0.png" class="lazyload placeholder" data-srcset="/picture/%E5%A4%87%E5%BF%98%E5%BD%95/QT/QT%E5%A4%87%E5%BF%98%E5%BD%95/%E4%BF%AE%E6%94%B9UI%E7%9A%84%E5%90%8D%E7%A7%B0.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="修改对象名称"></li></ul><ul><li><strong><font size="4">修改UI窗体名称</font></strong><br><img src="/picture/%E5%A4%87%E5%BF%98%E5%BD%95/QT/QT%E5%A4%87%E5%BF%98%E5%BD%95/UI%E7%AA%97%E5%8F%A3%E5%90%8D%E7%A7%B0%E7%9A%84%E4%BF%AE%E6%94%B9.png" class="lazyload placeholder" data-srcset="/picture/%E5%A4%87%E5%BF%98%E5%BD%95/QT/QT%E5%A4%87%E5%BF%98%E5%BD%95/UI%E7%AA%97%E5%8F%A3%E5%90%8D%E7%A7%B0%E7%9A%84%E4%BF%AE%E6%94%B9.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="修改UI窗体名称"></li></ul><ul><li><strong><font size="4">关于unknow type name……报错，取消ClangCodeModel即可消失，但无法解决</font></strong></li></ul><ul><li><strong><font size="4">graphicsView组件在使用时,</font></strong><br><img src="/picture/%E5%A4%87%E5%BF%98%E5%BD%95/QT/QT%E5%A4%87%E5%BF%98%E5%BD%95/UI%E7%AA%97%E5%8F%A3%E5%90%8D%E7%A7%B0%E7%9A%84%E4%BF%AE%E6%94%B9.png" class="lazyload placeholder" data-srcset="/picture/%E5%A4%87%E5%BF%98%E5%BD%95/QT/QT%E5%A4%87%E5%BF%98%E5%BD%95/UI%E7%AA%97%E5%8F%A3%E5%90%8D%E7%A7%B0%E7%9A%84%E4%BF%AE%E6%94%B9.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="修改UI窗体名称"></li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 给自己看的备忘录 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>合宙esp32-c3神奇的一些点</title>
       <link href="/2023/12/07/ESP32/%E5%90%88%E5%AE%99esp32-c3/%E5%90%88%E5%AE%99esp32-c3%E7%A5%9E%E5%A5%87%E7%9A%84%E4%B8%80%E4%BA%9B%E7%82%B9/"/>
       <url>/2023/12/07/ESP32/%E5%90%88%E5%AE%99esp32-c3/%E5%90%88%E5%AE%99esp32-c3%E7%A5%9E%E5%A5%87%E7%9A%84%E4%B8%80%E4%BA%9B%E7%82%B9/</url>
