@@ -621,11 +621,11 @@
       
         <div class="post-detail-header_wordcount">
           <span class="totalcount">
-            <i class="fas fa-file-text-o"></i> 字数统计: 60 |
+            <i class="fas fa-file-text-o"></i> 字数统计: 548 |
           </span>
   
           <span class="min2read">
-            <i class="fas fa-clock"></i> 阅读时长: 1分钟 |
+            <i class="fas fa-clock"></i> 阅读时长: 2分钟 |
           </span>
   
           
@@ -666,7 +666,39 @@
 <li><strong><font size="4">关于unknow type name……报错，取消ClangCodeModel即可消失，但无法解决</font></strong></li>
 </ul>
 <ul>
-<li><strong><font size="4">graphicsView组件在使用时,</font></strong><br><img src="/picture/%E5%A4%87%E5%BF%98%E5%BD%95/QT/QT%E5%A4%87%E5%BF%98%E5%BD%95/UI%E7%AA%97%E5%8F%A3%E5%90%8D%E7%A7%B0%E7%9A%84%E4%BF%AE%E6%94%B9.png" class="lazyload placeholder" data-srcset="/picture/%E5%A4%87%E5%BF%98%E5%BD%95/QT/QT%E5%A4%87%E5%BF%98%E5%BD%95/UI%E7%AA%97%E5%8F%A3%E5%90%8D%E7%A7%B0%E7%9A%84%E4%BF%AE%E6%94%B9.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="修改UI窗体名称"></li>
+<li><strong><font size="4">graphicsView组件在使用时,想使用QtCharts，得先提升为QtChartsview类</font></strong><div class="gallery stretch" col='2'>
+              <div class="img-wrap"><div class="img-bg"><img class="img lazyload placeholder" src="/picture/备忘录/QT/QT备忘录/使用graphicsView组件为Qchart时,需要提升为QChartView1.png" class="lazyload placeholder" data-srcset="/picture/备忘录/QT/QT备忘录/使用graphicsView组件为Qchart时,需要提升为QChartView1.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="图" style="height:400px;"/></div><span class="image-caption">图</span></div> <div class="img-wrap"><div class="img-bg"><img class="img lazyload placeholder" src="/picture/备忘录/QT/QT备忘录/使用graphicsView组件为Qchart时,需要提升为QChartView2.png" class="lazyload placeholder" data-srcset="/picture/备忘录/QT/QT备忘录/使用graphicsView组件为Qchart时,需要提升为QChartView2.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="图" style="height:400px;"/></div><span class="image-caption">图</span></div> 
+            </div></li>
+<li><strong><font size="4">char数据储显示负数时，%d是其char存储的二进制数除去符号位的反码+1,例如字符’255’，在char中是1111 1111，其%d值为-1，抛去符号位1，反码+1，得到1000 0001 即为-1</font></strong></li>
+</ul>
+<ul>
+<li><p><strong><font size="4">qt想要在其他cpp调用别的类的ui可以，先将接口传入</font></strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">TCP_Client::<span class="built_in">TCP_Client</span>(QWidget *parent) :</span><br><span class="line">            <span class="built_in">QMainWindow</span>(parent)         ,</span><br><span class="line">            <span class="built_in">ui</span>(<span class="keyword">new</span> Ui::TCP_Client)<span class="comment">//即这个参数，Ui::TCP_Client</span></span><br><span class="line">&#123;</span><br><span class="line">    ui -&gt;<span class="built_in">setupUi</span> (<span class="keyword">this</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><strong><font size="4">此时我们使用,这个类顶一个全局的*ui0，使ui0 &#x3D;ui,再放入.h文件进入声明</font></strong></p>
+</blockquote>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">.cpp</span><br><span class="line">Ui::TCP_Client *ui0;<span class="comment">//记住Ui::xxx是个类的名称</span></span><br><span class="line">TCP_Client::<span class="built_in">TCP_Client</span>(QWidget *parent) :</span><br><span class="line">            <span class="built_in">QMainWindow</span>(parent)         ,</span><br><span class="line">            <span class="built_in">ui</span>(<span class="keyword">new</span> Ui::TCP_Client)</span><br><span class="line">&#123;</span><br><span class="line">    ui0 = ui;</span><br><span class="line">    ui0 -&gt; <span class="built_in">setupUi</span>(<span class="keyword">this</span>);<span class="comment">//记住使用ui0的文件要包含&quot;ui_xxxxx.h头文件&quot;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.h</span><br><span class="line"><span class="keyword">extern</span> Ui::TCP_Client *ui0;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong><font size="4">在.h的class里面定义如下，带上了别的类TCP_Client *Client;</font></strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">.h</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">TCP_Client</span>;</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Timer_set</span> : <span class="keyword">public</span> QObject</span><br><span class="line">&#123;</span><br><span class="line">    Q_OBJECT</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">explicit</span> <span class="title">Timer_set</span><span class="params">(TCP_Client *Client)</span></span>;</span><br><span class="line">    ~<span class="built_in">Timer_set</span>();</span><br><span class="line"></span><br><span class="line">    TCP_Client *Client;<span class="comment">//------</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><strong><font size="4">则可以</font></strong></p>
+</blockquote>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">.cpp</span><br><span class="line"><span class="comment">//(TCP_Client *Client)是形参不用变,</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//Client(Client),第二个Client是传入的参数(只能在类里面选)，第一个Client是该文件，传入的参数之后用什么用变量名(相当于起名字)</span></span><br><span class="line">Timer_set::<span class="built_in">Timer_set</span>(TCP_Client *Client):<span class="built_in">Client</span>(Client)</span><br><span class="line">&#123;</span><br><span class="line">    Timer_set::<span class="built_in">timer_setup</span>();</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+</ul>
+<ul>
+<li><p><strong><font size="4">Widget控件在使用时，会作为父类，会影响内部的子类入label，设置背景图片时需要在ui的styleSheet写入</font></strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">类<span class="comment">#控件名</span></span><br><span class="line">&#123;</span><br><span class="line">border-image:url(C:/Users/glass/Desktop/sundry/picture/qq/QQ_Head/ccc.jpg);</span><br><span class="line"><span class="comment">#例如</span></span><br><span class="line">QWidget<span class="comment">#select</span></span><br><span class="line">&#123;</span><br><span class="line">border-image:url(C:/Users/glass/Desktop/sundry/picture/qq/QQ_Head/ccc.jpg);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><img src="/picture/%E5%A4%87%E5%BF%98%E5%BD%95/QT/QT%E5%A4%87%E5%BF%98%E5%BD%95/QT%E7%9A%84UI%E7%88%B6%E7%B1%BB%E5%AF%B9%E5%AD%90%E7%B1%BB%E7%9A%84%E5%BD%B1%E5%93%8D.png" class="lazyload placeholder" data-srcset="/picture/%E5%A4%87%E5%BF%98%E5%BD%95/QT/QT%E5%A4%87%E5%BF%98%E5%BD%95/QT%E7%9A%84UI%E7%88%B6%E7%B1%BB%E5%AF%B9%E5%AD%90%E7%B1%BB%E7%9A%84%E5%BD%B1%E5%93%8D.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="修改UI窗体名称"></p>
+</li>
+<li><p><strong><font size="4">QT在调用相对路径时，要先创建.qrc文件,然后右键open with -&gt; 资源编辑器，Add Files,将所有文件加入进去</font></strong></p>
+</li>
+</ul>
+<blockquote>
+<p><strong><font size="4">相对路径是:&#x2F;(资源的文件夹)&#x2F;(资源文件),且使用前需要先加入.qrc文件内,而.&#x2F;(资源的文件夹)&#x2F;(资源文件)是生成的debug&#x2F;release文件内部</font></strong></p>
+</blockquote>
+<ul>
+<li><strong><font size="4">想要去边框可以直接在ui内删除bar组件，例如menubar</font></strong></li>
 </ul>
 
       </div>
@@ -706,6 +738,25 @@
 <div class="post-nav">
 
 
+
+  
+  <div class="post-nav-prev post-nav-item">
+    <div class="post-nav-img" style="background-size: cover; 
+      background-position: center center;">
+      <img class="lazyload lazyload placeholder" src="/picture/QT/%E5%85%B3%E4%BA%8EQT%E5%9C%A8linux_amd64_x86-64%E4%B8%8A%E7%9A%84%E5%AE%89%E8%A3%85/theme.png" class="lazyload placeholder" data-srcset="/picture/QT/%E5%85%B3%E4%BA%8EQT%E5%9C%A8linux_amd64_x86-64%E4%B8%8A%E7%9A%84%E5%AE%89%E8%A3%85/theme.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+    </div>
+    <a href="/2024/03/06/QT/2%E5%85%B3%E4%BA%8EQT%20for%20linux%E4%B8%8Elinux%E8%B7%A8%E5%B9%B3%E5%8F%B0%E7%BC%96%E8%AF%91%E7%9A%84%E5%AE%89%E8%A3%85/%E5%85%B3%E4%BA%8EQT%E5%9C%A8linux_amd64_x86-64%E4%B8%8A%E7%9A%84%E5%AE%89%E8%A3%85/" class="post-nav-link">
+      <div class="title">
+        <i class="fas fa-angle-left"></i> 上一篇:
+        <div class="title-text">关于QT在linux_amd64_x86-64上的安装</div>
+      </div>
+      
+      <!-- <div class="content">
+        QT官方&#x2F;镜像的下载地址官网下载地址(下载速度非常慢，需要魔法)
+官网:https://download.qt
+      </div> -->
+    </a>
+  </div>
 
 
 
@@ -976,6 +1027,48 @@
             
 
             <div class="post-img-box">
+              <a href="/2024/03/06/QT/2%E5%85%B3%E4%BA%8EQT%20for%20linux%E4%B8%8Elinux%E8%B7%A8%E5%B9%B3%E5%8F%B0%E7%BC%96%E8%AF%91%E7%9A%84%E5%AE%89%E8%A3%85/linux%E8%B7%A8%E5%B9%B3%E5%8F%B0%E7%BC%96%E8%AF%91/" class="post-img " style="background-size: cover; 
+                background-position: center center;">
+                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="/picture/QT/%E5%85%B3%E4%BA%8EQT%E4%B8%8Eandroid%E7%9A%84%E5%AE%89%E8%A3%85(%E4%B8%80)/theme.png" class="lazyload placeholder" data-srcset="/picture/QT/%E5%85%B3%E4%BA%8EQT%E4%B8%8Eandroid%E7%9A%84%E5%AE%89%E8%A3%85(%E4%B8%80)/theme.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+              </a>
+            </div>
+            <div class="post-date-title">
+              <div>
+                
+                  <span class="post-date">03-06</span>
+                
+              </div>
+              <a class="post-title" href="/2024/03/06/QT/2%E5%85%B3%E4%BA%8EQT%20for%20linux%E4%B8%8Elinux%E8%B7%A8%E5%B9%B3%E5%8F%B0%E7%BC%96%E8%AF%91%E7%9A%84%E5%AE%89%E8%A3%85/linux%E8%B7%A8%E5%B9%B3%E5%8F%B0%E7%BC%96%E8%AF%91/">关于QT在linux_arm64上的安装</a>
+            </div>
+          </div>
+        
+          <div class="aside-list-item">
+            
+            
+            
+
+            <div class="post-img-box">
+              <a href="/2024/03/06/QT/2%E5%85%B3%E4%BA%8EQT%20for%20linux%E4%B8%8Elinux%E8%B7%A8%E5%B9%B3%E5%8F%B0%E7%BC%96%E8%AF%91%E7%9A%84%E5%AE%89%E8%A3%85/%E5%85%B3%E4%BA%8EQT%E5%9C%A8linux_amd64_x86-64%E4%B8%8A%E7%9A%84%E5%AE%89%E8%A3%85/" class="post-img " style="background-size: cover; 
+                background-position: center center;">
+                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="/picture/QT/%E5%85%B3%E4%BA%8EQT%E5%9C%A8linux_amd64_x86-64%E4%B8%8A%E7%9A%84%E5%AE%89%E8%A3%85/theme.png" class="lazyload placeholder" data-srcset="/picture/QT/%E5%85%B3%E4%BA%8EQT%E5%9C%A8linux_amd64_x86-64%E4%B8%8A%E7%9A%84%E5%AE%89%E8%A3%85/theme.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+              </a>
+            </div>
+            <div class="post-date-title">
+              <div>
+                
+                  <span class="post-date">03-06</span>
+                
+              </div>
+              <a class="post-title" href="/2024/03/06/QT/2%E5%85%B3%E4%BA%8EQT%20for%20linux%E4%B8%8Elinux%E8%B7%A8%E5%B9%B3%E5%8F%B0%E7%BC%96%E8%AF%91%E7%9A%84%E5%AE%89%E8%A3%85/%E5%85%B3%E4%BA%8EQT%E5%9C%A8linux_amd64_x86-64%E4%B8%8A%E7%9A%84%E5%AE%89%E8%A3%85/">关于QT在linux_amd64_x86-64上的安装</a>
+            </div>
+          </div>
+        
+          <div class="aside-list-item">
+            
+            
+            
+
+            <div class="post-img-box">
               <a href="/2023/12/11/%E5%A4%87%E5%BF%98%E5%BD%95/QT/%E6%A7%BD%E4%BF%A1%E5%8F%B7%E7%9A%84%E5%87%BD%E6%95%B0%E9%85%8D%E7%BD%AE/QT%E5%A4%87%E5%BF%98%E5%BD%95/" class="post-img " style="background-size: cover; 
                 background-position: center center;">
                 <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="https://pic3.zhimg.com/80/v2-7cfc909ebe8d83683909846edd6b5232_1440w.webp" class="lazyload placeholder" data-srcset="https://pic3.zhimg.com/80/v2-7cfc909ebe8d83683909846edd6b5232_1440w.webp" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
@@ -1030,48 +1123,6 @@
                 
               </div>
               <a class="post-title" href="/2023/12/06/ESP32/esp-idf%E4%B8%ADexamples%E5%86%85wifiAP%E7%9A%84main.c%E7%A7%BB%E6%A4%8D%E4%B8%BAcomponents%E7%BB%84%E4%BB%B6%EF%BC%8C%E7%BC%96%E8%AF%91%E6%8F%90%E7%A4%BA%E6%89%BE%E4%B8%8D%E5%88%B0esp_wifi.h%E6%8A%A5%E9%94%99/esp-idf%E4%B8%ADexamples%E5%86%85wifiAP%E7%9A%84main.c%E7%A7%BB%E6%A4%8D%E4%B8%BAcomponents%E7%BB%84%E4%BB%B6%EF%BC%8C%E7%BC%96%E8%AF%91%E6%8F%90%E7%A4%BA%E6%89%BE%E4%B8%8D%E5%88%B0esp_wifi.h%E6%8A%A5%E9%94%99/">esp-idf中examples内softAP例程的main.c移植为components组件，编译提示找不到esp_wifi.h报错</a>
-            </div>
-          </div>
-        
-          <div class="aside-list-item">
-            
-            
-            
-
-            <div class="post-img-box">
-              <a href="/2023/12/05/ESP32/esp-idf%E9%A1%B9%E7%9B%AE%E6%B7%BB%E5%8A%A0.c.h%E6%96%87%E4%BB%B6%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E6%B3%95/esp-idf%E9%A1%B9%E7%9B%AE%E6%B7%BB%E5%8A%A0.c.h%E6%96%87%E4%BB%B6%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E6%B3%95/" class="post-img " style="background-size: cover; 
-                background-position: center center;">
-                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="/picture/ESP32/esp-idf%E9%A1%B9%E7%9B%AE%E6%B7%BB%E5%8A%A0.c.h%E6%96%87%E4%BB%B6%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E6%B3%95/theme.png" class="lazyload placeholder" data-srcset="/picture/ESP32/esp-idf%E9%A1%B9%E7%9B%AE%E6%B7%BB%E5%8A%A0.c.h%E6%96%87%E4%BB%B6%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E6%B3%95/theme.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
-              </a>
-            </div>
-            <div class="post-date-title">
-              <div>
-                
-                  <span class="post-date">12-05</span>
-                
-              </div>
-              <a class="post-title" href="/2023/12/05/ESP32/esp-idf%E9%A1%B9%E7%9B%AE%E6%B7%BB%E5%8A%A0.c.h%E6%96%87%E4%BB%B6%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E6%B3%95/esp-idf%E9%A1%B9%E7%9B%AE%E6%B7%BB%E5%8A%A0.c.h%E6%96%87%E4%BB%B6%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E6%B3%95/">esp-idf项目添加.c.h文件的三种方法</a>
-            </div>
-          </div>
-        
-          <div class="aside-list-item">
-            
-            
-            
-
-            <div class="post-img-box">
-              <a href="/2023/12/04/ESP32/esp-idf%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/esp-idf%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/" class="post-img " style="background-size: cover; 
-                background-position: center center;">
-                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="/picture/ESP32/esp-idf%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/theme.png" class="lazyload placeholder" data-srcset="/picture/ESP32/esp-idf%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/theme.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
-              </a>
-            </div>
-            <div class="post-date-title">
-              <div>
-                
-                  <span class="post-date">12-04</span>
-                
-              </div>
-              <a class="post-title" href="/2023/12/04/ESP32/esp-idf%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/esp-idf%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/">esp-idf常用指令</a>
             </div>
           </div>
         
