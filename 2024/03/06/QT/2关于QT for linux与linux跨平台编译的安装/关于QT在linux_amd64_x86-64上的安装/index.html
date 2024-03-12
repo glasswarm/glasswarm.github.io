@@ -621,7 +621,7 @@
       
         <div class="post-detail-header_wordcount">
           <span class="totalcount">
-            <i class="fas fa-file-text-o"></i> 字数统计: 1k |
+            <i class="fas fa-file-text-o"></i> 字数统计: 1.1k |
           </span>
   
           <span class="min2read">
@@ -671,7 +671,7 @@
 <p><strong>选择该页面的archive&#x2F;qt&#x2F;5.12&#x2F;5.12.x&#x2F;single&#x2F;qt-everywhere-src-5.12.8.tar.xz，并下载，推荐5.12.8版本</strong></p>
 </blockquote>
 <h2 id="百度网盘下载地址"><a href="#百度网盘下载地址" class="headerlink" title="百度网盘下载地址"></a>百度网盘下载地址</h2><ul>
-<li><strong>包含：QT5.12.8 linux源码，QT5.12.8，Windows开源长期维护版本，linux源码，在线下载器6.4.1,安卓SDK&#x2F;NDK和JAVA SDK</strong></li>
+<li><strong>包含：QT5.12.8 linux源码，QT5.12.8 Windows开源长期维护版本，linux源码，在线下载器6.4.1,安卓SDK&#x2F;NDK和JAVA SDK</strong></li>
 <li>链接：<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1Jo4G82WE-E6BGU2oc7Ql7g?pwd=1234">https://pan.baidu.com/s/1Jo4G82WE-E6BGU2oc7Ql7g?pwd=1234</a> </li>
 <li>提取码：1234</li>
 </ul>
@@ -693,45 +693,37 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">bypy downfile xxx <span class="comment">#下载单个文件</span></span><br><span class="line">bypy downdir  xxx <span class="comment">#下载单个文件夹</span></span><br></pre></td></tr></table></figure>
 </blockquote>
 <h2 id="QT5-12-8安装"><a href="#QT5-12-8安装" class="headerlink" title="QT5.12.8安装"></a>QT5.12.8安装</h2><ul>
-<li><p><strong><font size="4">依赖安装</font></strong></p>
+<li><strong><font size="4">依赖安装</font></strong><blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install libxcb-xfixes0-dev libxcb-util-dev</span><br><span class="line">sudo apt-get install libxcb-xinerama0</span><br><span class="line">sudo apt-get install build-essential libgl1-mesa-dev</span><br></pre></td></tr></table></figure></blockquote>
+</li>
+</ul>
+<ul>
+<li><strong><font size="4">下载qt-everywhere-src-5.12.8.tar.xz，自选放置路径，如&#x2F;opt&#x2F;qt5.12.8&#x2F;内部。</font></strong></li>
+<li><strong><font size="4">解压缩</font></strong><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo tar -xvf qt-everywhere-src-5.12.8.tar.xz</span><br></pre></td></tr></table></figure></li>
+</ul>
+<ul>
+<li><strong><font size="4">终端进入QT源码文件夹，输入下指令，跳过一些不必要的模块(根据自己的需求)</font></strong><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./configure -prefix /opt/qt5.12.8/qt5.12.8 -release -opensource -skip qtwayland -skip qtlocation -skip qtscript -skip qt3d -skip qtcanvas3d -skip datavis3d -skip qt virtualkeyboard -platform linux-g++</span><br></pre></td></tr></table></figure>
 <blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install libxcb-xfixes0-dev libxcb-util-dev</span><br></pre></td></tr></table></figure>
+<p><strong><font size="4">configure参数解析</font></strong><br><strong><font size="4">CSDN(粗略) <a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_37654240/article/details/109639331">https://blog.csdn.net/qq_37654240/article/details/109639331</a></font></strong><br><strong><font size="4">博客(较深) <a target="_blank" rel="noopener" href="https://www.cnblogs.com/findumars/p/6254629.html">https://www.cnblogs.com/findumars/p/6254629.html</a></font></strong><br><strong><font size="4">-opensource表示使用开源版本，-confirm-license表示确认许可，-prefix表示安装路径</font></strong></p>
 </blockquote>
 </li>
-<li><p><strong><font size="4">下载qt-everywhere-src-5.12.8.tar.xz，自选放置路径，如&#x2F;opt&#x2F;qt5.12.8&#x2F;内部。</font></strong></p>
+</ul>
+<ul>
+<li><p><strong><font size="4">以下文件夹均可当参数跳过，例如-skip qt3d </font></strong><br><img src="/picture/QT/%E5%85%B3%E4%BA%8EQT%E5%9C%A8linux_amd64_x86-64%E4%B8%8A%E7%9A%84%E5%AE%89%E8%A3%85/4.png" class="lazyload placeholder" data-srcset="/picture/QT/%E5%85%B3%E4%BA%8EQT%E5%9C%A8linux_amd64_x86-64%E4%B8%8A%E7%9A%84%E5%AE%89%E8%A3%85/4.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="图四"></p>
 </li>
-<li><p><strong><font size="4">解压缩</font></strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo tar -xvf qt-everywhere-src-5.12.8.tar.xz</span><br></pre></td></tr></table></figure></li>
-</ul>
-<ul>
-<li><strong><font size="4">配置qt所需环境</font></strong><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install build-essential libgl1-mesa-dev</span><br></pre></td></tr></table></figure></li>
-</ul>
-<ul>
-<li><strong><font size="4">终端进入QT源码文件夹，输入下指令</font></strong><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./configure -opensource -confirm-license -prefix /opt/qt5.12.8/qt5.12.8</span><br></pre></td></tr></table></figure></li>
-</ul>
-<ul>
-<li><strong><font size="4">以下文件夹均可当参数跳过</font></strong><br><img src="/picture/QT/%E5%85%B3%E4%BA%8EQT%E5%9C%A8linux_amd64_x86-64%E4%B8%8A%E7%9A%84%E5%AE%89%E8%A3%85/4.png" class="lazyload placeholder" data-srcset="/picture/QT/%E5%85%B3%E4%BA%8EQT%E5%9C%A8linux_amd64_x86-64%E4%B8%8A%E7%9A%84%E5%AE%89%E8%A3%85/4.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="图四"><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-skip qt3d <span class="comment">#例如</span></span><br></pre></td></tr></table></figure></li>
-</ul>
-<blockquote>
-<p><strong><font size="4">-opensource表示使用开源版本，-confirm-license表示确认许可，-prefix表示安装路径</font></strong></p>
-</blockquote>
-<blockquote>
-<p><strong><font size="4">并等待2小时+</font></strong></p>
-</blockquote>
-<blockquote>
-<p><strong><font size="4">修正,报错&#x2F;usr&#x2F;bin&#x2F;ld.gold: error: cannot find -lclip2tri 或者 &#x2F;usr&#x2F;bin&#x2F;ld.gold: error: cannot find -lpoly2tri 或者 &#x2F;usr&#x2F;bin&#x2F;ld.gold: error: cannot find -lclipper,这主要是因为qtlocation模块依赖这个，我们-sikp qtlocation，即可跳过该报错</font></strong><br><strong><font size="4">随后要我跳过了一些不必要的下列代码</font></strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./configure -prefix /opt/qt5.12.8/qt5.12.8 -release -opensource -skip qtwayland -skip qtlocation -skip qtscript -skip qt3d -skip qtcanvas3d -skip datavis3d -skip qt virtualkeyboard -platform linux-g++</span><br></pre></td></tr></table></figure>
-</blockquote>
-<ul>
-<li><strong><font size="4">等待一段时间，之后输入下列指令</font></strong><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make -j4 <span class="comment">#表示使用4个线程进行编译，可以根据自己的cpu核心数进行调整</span></span><br></pre></td></tr></table></figure>
+<li><p><strong><font size="4">等待一段时间，之后输入下列指令</font></strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make -j4 <span class="comment">#表示使用4个线程进行编译，可以根据自己的cpu核心数进行调整</span></span><br></pre></td></tr></table></figure>
 <blockquote>
 <p><strong><font size="4">并等待2小时+</font></strong></p>
 </blockquote>
 </li>
 </ul>
 <ul>
-<li><strong><font size="4">安装编译好的QT</font></strong><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo make install </span><br></pre></td></tr></table></figure>
+<li><strong><font size="4">安装编译好的QT</font></strong><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo make install </span><br></pre></td></tr></table></figure></li>
+</ul>
 <blockquote>
+<p><strong><font size="4">修正,报错&#x2F;usr&#x2F;bin&#x2F;ld.gold: error: cannot find -lclip2tri 或者 &#x2F;usr&#x2F;bin&#x2F;ld.gold: error: cannot find -lpoly2tri 或者 &#x2F;usr&#x2F;bin&#x2F;ld.gold: error: cannot find -lclipper,这主要是因为qtlocation模块依赖这个，我们-sikp qtlocation，即可跳过该报错</font></strong><br><strong><font size="4"></font></strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./configure -prefix /opt/qt/qt5.12.8 -release -opensource -confirm-license -skip qtwayland -skip qtlocation -skip qtscript -skip qt3d -skip qtcanvas3d -skip datavis3d -skip qtvirtualkeyboard -xcb-xlib -qt-xcb</span><br></pre></td></tr></table></figure>
 <p><strong><font size="4">出现报错 not find python，但是其实已经下载了python，如&lt;图二&gt;</font></strong><br><img src="/picture/QT/%E5%85%B3%E4%BA%8EQT%E5%9C%A8linux_amd64_x86-64%E4%B8%8A%E7%9A%84%E5%AE%89%E8%A3%85/2.png" class="lazyload placeholder" data-srcset="/picture/QT/%E5%85%B3%E4%BA%8EQT%E5%9C%A8linux_amd64_x86-64%E4%B8%8A%E7%9A%84%E5%AE%89%E8%A3%85/2.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="图二"><br><strong><font size="4">是因为没有建立映射关系,输入如下指令</font></strong></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo ln -s /usr/bin/python3 /usr/bin/python </span><br><span class="line">ls -l /usr/bin/python*</span><br></pre></td></tr></table></figure>
 <p><strong><font size="4">发现，已经有python的映射了&lt;图三&gt;</font></strong><br><img src="/picture/QT/%E5%85%B3%E4%BA%8EQT%E5%9C%A8linux_amd64_x86-64%E4%B8%8A%E7%9A%84%E5%AE%89%E8%A3%85/3.png" class="lazyload placeholder" data-srcset="/picture/QT/%E5%85%B3%E4%BA%8EQT%E5%9C%A8linux_amd64_x86-64%E4%B8%8A%E7%9A%84%E5%AE%89%E8%A3%85/3.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="图三"><br><strong><font size="4">报错 C++: fatal error: Killed signal terminated program cc1plus compilation terminated.</font></strong><br><strong><font size="4">是虚拟机内存不足造成的。通过创建swap分区解决了这个问题</font></strong></p>
@@ -739,9 +731,8 @@
 <p><strong><font size="4">删除交换分区的命令</font></strong></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo swapoff /var/cache/swap/swap0</span><br><span class="line">sudo <span class="built_in">rm</span> /var/cache/swap/swap0</span><br></pre></td></tr></table></figure>
 <p><strong><font size="4">释放空间命令</font></strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo swapoff -a</span><br><span class="line">#详细的用法：swapoff --help</span><br><span class="line">#查看当前内存使用情况：free -m</span><br></pre></td></tr></table></figure></blockquote>
-</li>
-</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo swapoff -a</span><br><span class="line">#详细的用法：swapoff --help</span><br><span class="line">#查看当前内存使用情况：free -m</span><br></pre></td></tr></table></figure>
+</blockquote>
 <ul>
 <li><strong><font size="4">安装成功，没有任何error，图五</font></strong><br><img src="/picture/QT/%E5%85%B3%E4%BA%8EQT%E5%9C%A8linux_amd64_x86-64%E4%B8%8A%E7%9A%84%E5%AE%89%E8%A3%85/5.png" class="lazyload placeholder" data-srcset="/picture/QT/%E5%85%B3%E4%BA%8EQT%E5%9C%A8linux_amd64_x86-64%E4%B8%8A%E7%9A%84%E5%AE%89%E8%A3%85/5.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="图五"></li>
 </ul>
@@ -749,7 +740,7 @@
 <li><strong><font size="4">将安装成功的qt添加至环境变量</font></strong><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/profile</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p><strong><font size="4">将下列代码添加至profile文件中</font></strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> QTDIR=/opt/qt-5.12.5-install</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$QTDIR</span>/bin:<span class="variable">$PATH</span></span><br><span class="line"><span class="built_in">export</span> MANPATH=<span class="variable">$QTDIR</span>/man:<span class="variable">$MANPATH</span></span><br><span class="line"><span class="built_in">export</span> LD_LIBRARY_PATH=<span class="variable">$QTDIR</span>/lib:<span class="variable">$LD_LIBRARY_PATH</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> QTDIR=/opt/qt-5.12.5-install(你的qt安装目录)</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$QTDIR</span>/bin:<span class="variable">$PATH</span></span><br><span class="line"><span class="built_in">export</span> MANPATH=<span class="variable">$QTDIR</span>/man:<span class="variable">$MANPATH</span></span><br><span class="line"><span class="built_in">export</span> LD_LIBRARY_PATH=<span class="variable">$QTDIR</span>/lib:<span class="variable">$LD_LIBRARY_PATH</span></span><br></pre></td></tr></table></figure>
 <p><strong><font size="4">然后退出，并输入如下代码,声明环境变量</font></strong></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> /etc/profile</span><br></pre></td></tr></table></figure></blockquote>
 </li>
@@ -757,11 +748,24 @@
 <ul>
 <li><strong><font size="4">检验qt是否安装成功，输入</font></strong><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">qmake -v</span><br></pre></td></tr></table></figure>
 <blockquote>
-<p><strong><font size="4">输出图五，成功~</font></strong><br><img src="/picture/QT/%E5%85%B3%E4%BA%8EQT%E5%9C%A8linux_amd64_x86-64%E4%B8%8A%E7%9A%84%E5%AE%89%E8%A3%85/5.png" class="lazyload placeholder" data-srcset="/picture/QT/%E5%85%B3%E4%BA%8EQT%E5%9C%A8linux_amd64_x86-64%E4%B8%8A%E7%9A%84%E5%AE%89%E8%A3%85/5.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="图五"></p>
+<p><strong><font size="4">输出图六，成功~</font></strong><br><img src="/picture/QT/%E5%85%B3%E4%BA%8EQT%E5%9C%A8linux_amd64_x86-64%E4%B8%8A%E7%9A%84%E5%AE%89%E8%A3%85/6.png" class="lazyload placeholder" data-srcset="/picture/QT/%E5%85%B3%E4%BA%8EQT%E5%9C%A8linux_amd64_x86-64%E4%B8%8A%E7%9A%84%E5%AE%89%E8%A3%85/6.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="图六"></p>
 </blockquote>
 </li>
 </ul>
-<h2 id="环境配置篇待续"><a href="#环境配置篇待续" class="headerlink" title="环境配置篇待续"></a>环境配置篇待续</h2>
+<h2 id="如果想看详细的输出问题"><a href="#如果想看详细的输出问题" class="headerlink" title="如果想看详细的输出问题"></a>如果想看详细的输出问题</h2><ul>
+<li><strong><font size="4">打开环境变量配置文件</font></strong><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim ~/.bashrc</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><strong><font size="4">末尾添加如下代码</font></strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export QT_DEBUG_PLUGINS=1</span><br></pre></td></tr></table></figure></blockquote>
+</li>
+</ul>
+<ul>
+<li><strong><font size="4">启动环境变量</font></strong><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/.bashrc</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="完成"><a href="#完成" class="headerlink" title="完成"></a>完成</h2><ul>
+<li><strong><font size="4">如果想查看代码行数</font></strong><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(Get-ChildItem -Recurse -File | Get-Content | Measure-Object -Line).Lines</span><br></pre></td></tr></table></figure></li>
+</ul>
+
       </div>
       <div class="post-tags-categories">
         
@@ -1064,7 +1068,7 @@
   <div class='content'>
     <div class="toc-main">
       <div class="toc-content">
-        <!-- <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#QT%E5%AE%98%E6%96%B9-%E9%95%9C%E5%83%8F%E7%9A%84%E4%B8%8B%E8%BD%BD%E5%9C%B0%E5%9D%80"><span class="toc-text">QT官方&#x2F;镜像的下载地址</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%98%E7%BD%91%E4%B8%8B%E8%BD%BD%E5%9C%B0%E5%9D%80-%E4%B8%8B%E8%BD%BD%E9%80%9F%E5%BA%A6%E9%9D%9E%E5%B8%B8%E6%85%A2%EF%BC%8C%E9%9C%80%E8%A6%81%E9%AD%94%E6%B3%95"><span class="toc-text">官网下载地址(下载速度非常慢，需要魔法)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%BD%E5%86%85%E9%95%9C%E5%83%8F%E4%B8%8B%E8%BD%BD%E5%9C%B0%E5%9D%80-%E5%B7%B2%E7%BB%8F%E5%85%A8%E9%83%A8%E5%A4%B1%E6%95%88"><span class="toc-text">国内镜像下载地址(已经全部失效)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A1%B5%E9%9D%A2%E4%B8%8B%E8%BD%BD-%E4%B8%8B%E8%BD%BD%E9%80%9F%E5%BA%A6%E9%9D%9E%E5%B8%B8%E6%85%A2%EF%BC%8C%E9%9C%80%E8%A6%81%E9%AD%94%E6%B3%95%EF%BC%8C%E4%B8%94%E9%9C%80%E8%A6%81%E6%A1%8C%E9%9D%A2%E6%98%BE%E7%A4%BA%EF%BC%8C%E5%AF%B9linux%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8D%E5%88%A9"><span class="toc-text">页面下载(下载速度非常慢，需要魔法，且需要桌面显示，对linux云服务器不利)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98%E4%B8%8B%E8%BD%BD%E5%9C%B0%E5%9D%80"><span class="toc-text">百度网盘下载地址</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#QT5-12-8-linux%E6%BA%90%E7%A0%81%E5%AE%89%E8%A3%85"><span class="toc-text">QT5.12.8_linux源码安装</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#bypy%E4%B8%8B%E8%BD%BD-%E5%8F%AF%E9%80%89"><span class="toc-text">bypy下载(可选)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#QT5-12-8%E5%AE%89%E8%A3%85"><span class="toc-text">QT5.12.8安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E7%AF%87%E5%BE%85%E7%BB%AD"><span class="toc-text">环境配置篇待续</span></a></li></ol></li></ol> -->
+        <!-- <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#QT%E5%AE%98%E6%96%B9-%E9%95%9C%E5%83%8F%E7%9A%84%E4%B8%8B%E8%BD%BD%E5%9C%B0%E5%9D%80"><span class="toc-text">QT官方&#x2F;镜像的下载地址</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%98%E7%BD%91%E4%B8%8B%E8%BD%BD%E5%9C%B0%E5%9D%80-%E4%B8%8B%E8%BD%BD%E9%80%9F%E5%BA%A6%E9%9D%9E%E5%B8%B8%E6%85%A2%EF%BC%8C%E9%9C%80%E8%A6%81%E9%AD%94%E6%B3%95"><span class="toc-text">官网下载地址(下载速度非常慢，需要魔法)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%BD%E5%86%85%E9%95%9C%E5%83%8F%E4%B8%8B%E8%BD%BD%E5%9C%B0%E5%9D%80-%E5%B7%B2%E7%BB%8F%E5%85%A8%E9%83%A8%E5%A4%B1%E6%95%88"><span class="toc-text">国内镜像下载地址(已经全部失效)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A1%B5%E9%9D%A2%E4%B8%8B%E8%BD%BD-%E4%B8%8B%E8%BD%BD%E9%80%9F%E5%BA%A6%E9%9D%9E%E5%B8%B8%E6%85%A2%EF%BC%8C%E9%9C%80%E8%A6%81%E9%AD%94%E6%B3%95%EF%BC%8C%E4%B8%94%E9%9C%80%E8%A6%81%E6%A1%8C%E9%9D%A2%E6%98%BE%E7%A4%BA%EF%BC%8C%E5%AF%B9linux%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8D%E5%88%A9"><span class="toc-text">页面下载(下载速度非常慢，需要魔法，且需要桌面显示，对linux云服务器不利)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98%E4%B8%8B%E8%BD%BD%E5%9C%B0%E5%9D%80"><span class="toc-text">百度网盘下载地址</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#QT5-12-8-linux%E6%BA%90%E7%A0%81%E5%AE%89%E8%A3%85"><span class="toc-text">QT5.12.8_linux源码安装</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#bypy%E4%B8%8B%E8%BD%BD-%E5%8F%AF%E9%80%89"><span class="toc-text">bypy下载(可选)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#QT5-12-8%E5%AE%89%E8%A3%85"><span class="toc-text">QT5.12.8安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A6%82%E6%9E%9C%E6%83%B3%E7%9C%8B%E8%AF%A6%E7%BB%86%E7%9A%84%E8%BE%93%E5%87%BA%E9%97%AE%E9%A2%98"><span class="toc-text">如果想看详细的输出问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%8C%E6%88%90"><span class="toc-text">完成</span></a></li></ol></li></ol> -->
         <div class="toc"></div>
       </div>
     </div>
