@@ -621,11 +621,11 @@
       
         <div class="post-detail-header_wordcount">
           <span class="totalcount">
-            <i class="fas fa-file-text-o"></i> 字数统计: 1.1k |
+            <i class="fas fa-file-text-o"></i> 字数统计: 1.2k |
           </span>
   
           <span class="min2read">
-            <i class="fas fa-clock"></i> 阅读时长: 4分钟 |
+            <i class="fas fa-clock"></i> 阅读时长: 5分钟 |
           </span>
   
           
@@ -761,6 +761,15 @@
 </ul>
 <ul>
 <li><strong><font size="4">启动环境变量</font></strong><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/.bashrc</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="如何进行编译，生成linux可执行文件"><a href="#如何进行编译，生成linux可执行文件" class="headerlink" title="如何进行编译，生成linux可执行文件"></a>如何进行编译，生成linux可执行文件</h2><ul>
+<li><strong><font size="4">使用qmake xxx.pro(你的.pro文件)生成Makefile文件</font></strong><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">qmake xxx.pro</span><br></pre></td></tr></table></figure></li>
+</ul>
+<ul>
+<li><strong><font size="4">使用make生成可执行文件</font></strong><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make</span><br></pre></td></tr></table></figure></li>
+</ul>
+<ul>
+<li><strong><font size="4">执行可执行文件</font></strong><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./xxx</span><br></pre></td></tr></table></figure></li>
 </ul>
 <h2 id="完成"><a href="#完成" class="headerlink" title="完成"></a>完成</h2><ul>
 <li><strong><font size="4">如果想查看代码行数</font></strong><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(Get-ChildItem -Recurse -File | Get-Content | Measure-Object -Line).Lines</span><br></pre></td></tr></table></figure></li>
@@ -1068,7 +1077,7 @@
   <div class='content'>
     <div class="toc-main">
       <div class="toc-content">
-        <!-- <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#QT%E5%AE%98%E6%96%B9-%E9%95%9C%E5%83%8F%E7%9A%84%E4%B8%8B%E8%BD%BD%E5%9C%B0%E5%9D%80"><span class="toc-text">QT官方&#x2F;镜像的下载地址</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%98%E7%BD%91%E4%B8%8B%E8%BD%BD%E5%9C%B0%E5%9D%80-%E4%B8%8B%E8%BD%BD%E9%80%9F%E5%BA%A6%E9%9D%9E%E5%B8%B8%E6%85%A2%EF%BC%8C%E9%9C%80%E8%A6%81%E9%AD%94%E6%B3%95"><span class="toc-text">官网下载地址(下载速度非常慢，需要魔法)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%BD%E5%86%85%E9%95%9C%E5%83%8F%E4%B8%8B%E8%BD%BD%E5%9C%B0%E5%9D%80-%E5%B7%B2%E7%BB%8F%E5%85%A8%E9%83%A8%E5%A4%B1%E6%95%88"><span class="toc-text">国内镜像下载地址(已经全部失效)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A1%B5%E9%9D%A2%E4%B8%8B%E8%BD%BD-%E4%B8%8B%E8%BD%BD%E9%80%9F%E5%BA%A6%E9%9D%9E%E5%B8%B8%E6%85%A2%EF%BC%8C%E9%9C%80%E8%A6%81%E9%AD%94%E6%B3%95%EF%BC%8C%E4%B8%94%E9%9C%80%E8%A6%81%E6%A1%8C%E9%9D%A2%E6%98%BE%E7%A4%BA%EF%BC%8C%E5%AF%B9linux%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8D%E5%88%A9"><span class="toc-text">页面下载(下载速度非常慢，需要魔法，且需要桌面显示，对linux云服务器不利)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98%E4%B8%8B%E8%BD%BD%E5%9C%B0%E5%9D%80"><span class="toc-text">百度网盘下载地址</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#QT5-12-8-linux%E6%BA%90%E7%A0%81%E5%AE%89%E8%A3%85"><span class="toc-text">QT5.12.8_linux源码安装</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#bypy%E4%B8%8B%E8%BD%BD-%E5%8F%AF%E9%80%89"><span class="toc-text">bypy下载(可选)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#QT5-12-8%E5%AE%89%E8%A3%85"><span class="toc-text">QT5.12.8安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A6%82%E6%9E%9C%E6%83%B3%E7%9C%8B%E8%AF%A6%E7%BB%86%E7%9A%84%E8%BE%93%E5%87%BA%E9%97%AE%E9%A2%98"><span class="toc-text">如果想看详细的输出问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%8C%E6%88%90"><span class="toc-text">完成</span></a></li></ol></li></ol> -->
+        <!-- <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#QT%E5%AE%98%E6%96%B9-%E9%95%9C%E5%83%8F%E7%9A%84%E4%B8%8B%E8%BD%BD%E5%9C%B0%E5%9D%80"><span class="toc-text">QT官方&#x2F;镜像的下载地址</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%98%E7%BD%91%E4%B8%8B%E8%BD%BD%E5%9C%B0%E5%9D%80-%E4%B8%8B%E8%BD%BD%E9%80%9F%E5%BA%A6%E9%9D%9E%E5%B8%B8%E6%85%A2%EF%BC%8C%E9%9C%80%E8%A6%81%E9%AD%94%E6%B3%95"><span class="toc-text">官网下载地址(下载速度非常慢，需要魔法)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%BD%E5%86%85%E9%95%9C%E5%83%8F%E4%B8%8B%E8%BD%BD%E5%9C%B0%E5%9D%80-%E5%B7%B2%E7%BB%8F%E5%85%A8%E9%83%A8%E5%A4%B1%E6%95%88"><span class="toc-text">国内镜像下载地址(已经全部失效)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A1%B5%E9%9D%A2%E4%B8%8B%E8%BD%BD-%E4%B8%8B%E8%BD%BD%E9%80%9F%E5%BA%A6%E9%9D%9E%E5%B8%B8%E6%85%A2%EF%BC%8C%E9%9C%80%E8%A6%81%E9%AD%94%E6%B3%95%EF%BC%8C%E4%B8%94%E9%9C%80%E8%A6%81%E6%A1%8C%E9%9D%A2%E6%98%BE%E7%A4%BA%EF%BC%8C%E5%AF%B9linux%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8D%E5%88%A9"><span class="toc-text">页面下载(下载速度非常慢，需要魔法，且需要桌面显示，对linux云服务器不利)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98%E4%B8%8B%E8%BD%BD%E5%9C%B0%E5%9D%80"><span class="toc-text">百度网盘下载地址</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#QT5-12-8-linux%E6%BA%90%E7%A0%81%E5%AE%89%E8%A3%85"><span class="toc-text">QT5.12.8_linux源码安装</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#bypy%E4%B8%8B%E8%BD%BD-%E5%8F%AF%E9%80%89"><span class="toc-text">bypy下载(可选)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#QT5-12-8%E5%AE%89%E8%A3%85"><span class="toc-text">QT5.12.8安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A6%82%E6%9E%9C%E6%83%B3%E7%9C%8B%E8%AF%A6%E7%BB%86%E7%9A%84%E8%BE%93%E5%87%BA%E9%97%AE%E9%A2%98"><span class="toc-text">如果想看详细的输出问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E8%BF%9B%E8%A1%8C%E7%BC%96%E8%AF%91%EF%BC%8C%E7%94%9F%E6%88%90linux%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%96%87%E4%BB%B6"><span class="toc-text">如何进行编译，生成linux可执行文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%8C%E6%88%90"><span class="toc-text">完成</span></a></li></ol></li></ol> -->
         <div class="toc"></div>
       </div>
     </div>
@@ -1101,18 +1110,18 @@
             
 
             <div class="post-img-box">
-              <a href="/2024/03/06/QT/2%E5%85%B3%E4%BA%8EQT%20for%20linux%E4%B8%8Elinux%E8%B7%A8%E5%B9%B3%E5%8F%B0%E7%BC%96%E8%AF%91%E7%9A%84%E5%AE%89%E8%A3%85/linux%E8%B7%A8%E5%B9%B3%E5%8F%B0%E7%BC%96%E8%AF%91/" class="post-img " style="background-size: cover; 
+              <a href="/2024/05/01/Linux/Linux%E5%86%85%E6%A0%B8%E7%BC%96%E8%AF%91/%E5%AE%89%E8%A3%85arm-gcc-linux%E7%BC%96%E8%AF%91%E9%93%BE/" class="post-img " style="background-size: cover; 
                 background-position: center center;">
-                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="/picture/QT/%E5%85%B3%E4%BA%8EQT%E4%B8%8Eandroid%E7%9A%84%E5%AE%89%E8%A3%85(%E4%B8%80)/theme.png" class="lazyload placeholder" data-srcset="/picture/QT/%E5%85%B3%E4%BA%8EQT%E4%B8%8Eandroid%E7%9A%84%E5%AE%89%E8%A3%85(%E4%B8%80)/theme.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="/picture/Linux/Linux%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/theme.png" class="lazyload placeholder" data-srcset="/picture/Linux/Linux%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/theme.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
               </a>
             </div>
             <div class="post-date-title">
               <div>
                 
-                  <span class="post-date">03-06</span>
+                  <span class="post-date">05-01</span>
                 
               </div>
-              <a class="post-title" href="/2024/03/06/QT/2%E5%85%B3%E4%BA%8EQT%20for%20linux%E4%B8%8Elinux%E8%B7%A8%E5%B9%B3%E5%8F%B0%E7%BC%96%E8%AF%91%E7%9A%84%E5%AE%89%E8%A3%85/linux%E8%B7%A8%E5%B9%B3%E5%8F%B0%E7%BC%96%E8%AF%91/">关于QT在linux_arm64上的安装</a>
+              <a class="post-title" href="/2024/05/01/Linux/Linux%E5%86%85%E6%A0%B8%E7%BC%96%E8%AF%91/%E5%AE%89%E8%A3%85arm-gcc-linux%E7%BC%96%E8%AF%91%E9%93%BE/">编译内核</a>
             </div>
           </div>
         
@@ -1122,18 +1131,18 @@
             
 
             <div class="post-img-box">
-              <a href="/2024/03/06/QT/2%E5%85%B3%E4%BA%8EQT%20for%20linux%E4%B8%8Elinux%E8%B7%A8%E5%B9%B3%E5%8F%B0%E7%BC%96%E8%AF%91%E7%9A%84%E5%AE%89%E8%A3%85/%E5%85%B3%E4%BA%8EQT%E5%9C%A8linux_amd64_x86-64%E4%B8%8A%E7%9A%84%E5%AE%89%E8%A3%85/" class="post-img " style="background-size: cover; 
+              <a href="/2024/05/01/Linux/Linux%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/linux%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/" class="post-img " style="background-size: cover; 
                 background-position: center center;">
-                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="/picture/QT/%E5%85%B3%E4%BA%8EQT%E5%9C%A8linux_amd64_x86-64%E4%B8%8A%E7%9A%84%E5%AE%89%E8%A3%85/theme.png" class="lazyload placeholder" data-srcset="/picture/QT/%E5%85%B3%E4%BA%8EQT%E5%9C%A8linux_amd64_x86-64%E4%B8%8A%E7%9A%84%E5%AE%89%E8%A3%85/theme.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="/picture/Linux/Linux%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/theme.png" class="lazyload placeholder" data-srcset="/picture/Linux/Linux%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/theme.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
               </a>
             </div>
             <div class="post-date-title">
               <div>
                 
-                  <span class="post-date">03-06</span>
+                  <span class="post-date">05-01</span>
                 
               </div>
-              <a class="post-title" href="/2024/03/06/QT/2%E5%85%B3%E4%BA%8EQT%20for%20linux%E4%B8%8Elinux%E8%B7%A8%E5%B9%B3%E5%8F%B0%E7%BC%96%E8%AF%91%E7%9A%84%E5%AE%89%E8%A3%85/%E5%85%B3%E4%BA%8EQT%E5%9C%A8linux_amd64_x86-64%E4%B8%8A%E7%9A%84%E5%AE%89%E8%A3%85/">关于QT在linux_amd64_x86-64上的安装</a>
+              <a class="post-title" href="/2024/05/01/Linux/Linux%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/linux%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/">编译内核</a>
             </div>
           </div>
         
@@ -1143,18 +1152,18 @@
             
 
             <div class="post-img-box">
-              <a href="/2023/12/11/%E5%A4%87%E5%BF%98%E5%BD%95/QT/%E6%A7%BD%E4%BF%A1%E5%8F%B7%E7%9A%84%E5%87%BD%E6%95%B0%E9%85%8D%E7%BD%AE/QT%E5%A4%87%E5%BF%98%E5%BD%95/" class="post-img " style="background-size: cover; 
+              <a href="/2024/04/24/Linux/Linux%E5%86%85%E6%A0%B8%E7%BC%96%E8%AF%91/%E7%BC%96%E8%AF%91%E5%86%85%E6%A0%B8/" class="post-img " style="background-size: cover; 
                 background-position: center center;">
-                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="https://pic3.zhimg.com/80/v2-7cfc909ebe8d83683909846edd6b5232_1440w.webp" class="lazyload placeholder" data-srcset="https://pic3.zhimg.com/80/v2-7cfc909ebe8d83683909846edd6b5232_1440w.webp" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="/picture/Linux/%E7%BC%96%E8%AF%91%E5%86%85%E6%A0%B8/theme.png" class="lazyload placeholder" data-srcset="/picture/Linux/%E7%BC%96%E8%AF%91%E5%86%85%E6%A0%B8/theme.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
               </a>
             </div>
             <div class="post-date-title">
               <div>
                 
-                  <span class="post-date">12-11</span>
+                  <span class="post-date">04-24</span>
                 
               </div>
-              <a class="post-title" href="/2023/12/11/%E5%A4%87%E5%BF%98%E5%BD%95/QT/%E6%A7%BD%E4%BF%A1%E5%8F%B7%E7%9A%84%E5%87%BD%E6%95%B0%E9%85%8D%E7%BD%AE/QT%E5%A4%87%E5%BF%98%E5%BD%95/">关于QT的一些备忘录</a>
+              <a class="post-title" href="/2024/04/24/Linux/Linux%E5%86%85%E6%A0%B8%E7%BC%96%E8%AF%91/%E7%BC%96%E8%AF%91%E5%86%85%E6%A0%B8/">编译内核</a>
             </div>
           </div>
         
@@ -1164,18 +1173,18 @@
             
 
             <div class="post-img-box">
-              <a href="/2023/12/07/ESP32/%E5%90%88%E5%AE%99esp32-c3/%E5%90%88%E5%AE%99esp32-c3%E7%A5%9E%E5%A5%87%E7%9A%84%E4%B8%80%E4%BA%9B%E7%82%B9/" class="post-img " style="background-size: cover; 
+              <a href="/2024/04/24/Linux/Linux%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/NFS%E7%9A%84%E4%BD%9C%E7%94%A8/" class="post-img " style="background-size: cover; 
                 background-position: center center;">
-                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="/picture/ESP32/%E5%90%88%E5%AE%99esp32-c3/theme.png" class="lazyload placeholder" data-srcset="/picture/ESP32/%E5%90%88%E5%AE%99esp32-c3/theme.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="/picture/Linux/NFS%E7%9A%84%E4%BD%9C%E7%94%A8/theme.png" class="lazyload placeholder" data-srcset="/picture/Linux/NFS%E7%9A%84%E4%BD%9C%E7%94%A8/theme.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
               </a>
             </div>
             <div class="post-date-title">
               <div>
                 
-                  <span class="post-date">12-07</span>
+                  <span class="post-date">04-24</span>
                 
               </div>
-              <a class="post-title" href="/2023/12/07/ESP32/%E5%90%88%E5%AE%99esp32-c3/%E5%90%88%E5%AE%99esp32-c3%E7%A5%9E%E5%A5%87%E7%9A%84%E4%B8%80%E4%BA%9B%E7%82%B9/">合宙esp32-c3神奇的一些点</a>
+              <a class="post-title" href="/2024/04/24/Linux/Linux%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/NFS%E7%9A%84%E4%BD%9C%E7%94%A8/">NFS的作用</a>
             </div>
           </div>
         
@@ -1185,18 +1194,18 @@
             
 
             <div class="post-img-box">
-              <a href="/2023/12/06/ESP32/esp-idf%E4%B8%ADexamples%E5%86%85wifiAP%E7%9A%84main.c%E7%A7%BB%E6%A4%8D%E4%B8%BAcomponents%E7%BB%84%E4%BB%B6%EF%BC%8C%E7%BC%96%E8%AF%91%E6%8F%90%E7%A4%BA%E6%89%BE%E4%B8%8D%E5%88%B0esp_wifi.h%E6%8A%A5%E9%94%99/esp-idf%E4%B8%ADexamples%E5%86%85wifiAP%E7%9A%84main.c%E7%A7%BB%E6%A4%8D%E4%B8%BAcomponents%E7%BB%84%E4%BB%B6%EF%BC%8C%E7%BC%96%E8%AF%91%E6%8F%90%E7%A4%BA%E6%89%BE%E4%B8%8D%E5%88%B0esp_wifi.h%E6%8A%A5%E9%94%99/" class="post-img " style="background-size: cover; 
+              <a href="/2024/03/29/Linux/Linux%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/%E5%AE%89%E8%A3%85%E8%BE%85%E5%8A%A9%E5%B7%A5%E5%85%B7/" class="post-img " style="background-size: cover; 
                 background-position: center center;">
-                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="/picture/ESP32/esp-idf%E4%B8%ADexamples%E5%86%85wifiAP%E7%9A%84main.c%E7%A7%BB%E6%A4%8D%E4%B8%BAcomponents%E7%BB%84%E4%BB%B6%EF%BC%8C%E7%BC%96%E8%AF%91%E6%8F%90%E7%A4%BA%E6%89%BE%E4%B8%8D%E5%88%B0esp_wifi.h%E6%8A%A5%E9%94%99/theme.png" class="lazyload placeholder" data-srcset="/picture/ESP32/esp-idf%E4%B8%ADexamples%E5%86%85wifiAP%E7%9A%84main.c%E7%A7%BB%E6%A4%8D%E4%B8%BAcomponents%E7%BB%84%E4%BB%B6%EF%BC%8C%E7%BC%96%E8%AF%91%E6%8F%90%E7%A4%BA%E6%89%BE%E4%B8%8D%E5%88%B0esp_wifi.h%E6%8A%A5%E9%94%99/theme.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="/picture/Linux/Linux_Frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/theme.png" class="lazyload placeholder" data-srcset="/picture/Linux/Linux_Frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/theme.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
               </a>
             </div>
             <div class="post-date-title">
               <div>
                 
-                  <span class="post-date">12-06</span>
+                  <span class="post-date">03-29</span>
                 
               </div>
-              <a class="post-title" href="/2023/12/06/ESP32/esp-idf%E4%B8%ADexamples%E5%86%85wifiAP%E7%9A%84main.c%E7%A7%BB%E6%A4%8D%E4%B8%BAcomponents%E7%BB%84%E4%BB%B6%EF%BC%8C%E7%BC%96%E8%AF%91%E6%8F%90%E7%A4%BA%E6%89%BE%E4%B8%8D%E5%88%B0esp_wifi.h%E6%8A%A5%E9%94%99/esp-idf%E4%B8%ADexamples%E5%86%85wifiAP%E7%9A%84main.c%E7%A7%BB%E6%A4%8D%E4%B8%BAcomponents%E7%BB%84%E4%BB%B6%EF%BC%8C%E7%BC%96%E8%AF%91%E6%8F%90%E7%A4%BA%E6%89%BE%E4%B8%8D%E5%88%B0esp_wifi.h%E6%8A%A5%E9%94%99/">esp-idf中examples内softAP例程的main.c移植为components组件，编译提示找不到esp_wifi.h报错</a>
+              <a class="post-title" href="/2024/03/29/Linux/Linux%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/%E5%AE%89%E8%A3%85%E8%BE%85%E5%8A%A9%E5%B7%A5%E5%85%B7/">安装辅助工具</a>
             </div>
           </div>
         
