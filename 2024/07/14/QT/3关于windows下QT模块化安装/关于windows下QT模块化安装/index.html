@@ -11,7 +11,7 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-  <title>arm-gcc-linux编译链 | T琉璃T</title>
+  <title>关于windows下QT模块化安装 | T琉璃T</title>
 
   <link rel="icon" type="image/jpeg" href="/glasswarm/head.jpg">
   <link rel="stylesheet" href="https://at.alicdn.com/t/font_1911880_c1nvbyezg17.css">
@@ -598,21 +598,21 @@
 
 
 <div class="post-detail-header" id="thumbnail_canvas" style="background-repeat: no-repeat; background-size: cover; 
-  background-position: center center;position: relative;background-image:url('/picture/Linux/Linux%E7%BC%96%E8%AF%91%E5%86%85%E6%A0%B8/theme.png')">
+  background-position: center center;position: relative;background-image:url('/picture/QT/%E5%85%B3%E4%BA%8Ewindows%E4%B8%8BQT%E6%A8%A1%E5%9D%97%E5%8C%96%E5%AE%89%E8%A3%85/theme.png')">
   <div class="post-detail-header-mask"></div>
   <canvas id="header_canvas"style="position:absolute;bottom:0;pointer-events:none;"></canvas>
   
   <div class="post-detail-header_info-box">
     <div class="title-box">
       <span class="title">
-        arm-gcc-linux编译链
+        关于windows下QT模块化安装
       </span>
     </div>
     
     
       
         <span class="post-detail-header_date">
-          <i class="fas fa-calendar"></i> 发表于：2024-05-01 |
+          <i class="fas fa-calendar"></i> 发表于：2024-07-14 |
         </span>
       
 
@@ -621,7 +621,7 @@
       
         <div class="post-detail-header_wordcount">
           <span class="totalcount">
-            <i class="fas fa-file-text-o"></i> 字数统计: 89 |
+            <i class="fas fa-file-text-o"></i> 字数统计: 175 |
           </span>
   
           <span class="min2read">
@@ -652,40 +652,22 @@
   <div class="main-content">
     <article class="post post-detail">
       <div class="post-content">
-        <ul>
-<li><strong><font size="4">下载一个arm-gcc-linux.tar.gz文件,并解压</font></strong></li>
-</ul>
-<ul>
-<li><strong><font size="4">将bin文件添加到环境变量中</font></strong><blockquote>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim ~/.bashrc</span><br></pre></td></tr></table></figure>
-<p><strong><font size="4">添加如下代码</font></strong></p>
-<blockquote>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">export PATH=$PATH:/opt/arm-gcc-linux/bin</span><br><span class="line">export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/arm-gcc-linux/lib</span><br></pre></td></tr></table></figure></blockquote>
-</blockquote>
-</li>
-</ul>
-<ul>
-<li><strong><font size="4">使能环境变量source ~&#x2F;.bashrc</font></strong></li>
-</ul>
-<ul>
-<li><p><strong><font size="4">测试安装是否成功</font></strong></p>
-<blockquote>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">arm-linux-gcc -v</span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
-<li><p><strong><font size="4">编译文件,生成可执行文件</font></strong></p>
-<blockquote>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">arm-linux-gcc xxx.c -o xxx</span><br></pre></td></tr></table></figure></blockquote>
-</li>
-</ul>
+        <h1 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h1><h3 id="1、QT环境，可以直接任务栏搜QT5-xx-x-MinGW-64bit-之类的"><a href="#1、QT环境，可以直接任务栏搜QT5-xx-x-MinGW-64bit-之类的" class="headerlink" title="1、QT环境，可以直接任务栏搜QT5.xx.x(MinGW-64bit)之类的"></a><strong><font size="4">1、QT环境，可以直接任务栏搜QT5.xx.x(MinGW-64bit)之类的</font></strong></h3><h3 id="2、perl环境-下载地址-右方的Releases-下载msl文件"><a href="#2、perl环境-下载地址-右方的Releases-下载msl文件" class="headerlink" title="2、perl环境,下载地址,右方的Releases,下载msl文件"></a><strong><font size="4">2、perl环境,下载地址,右方的Releases,下载msl文件</font></strong></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/StrawberryPerl/Perl-Dist-Strawberry</span><br></pre></td></tr></table></figure>
 
+
+<h3 id="根据引导完成安装，在cmd输入如下命令，显示如图一"><a href="#根据引导完成安装，在cmd输入如下命令，显示如图一" class="headerlink" title="根据引导完成安装，在cmd输入如下命令，显示如图一"></a><strong><font size="4">根据引导完成安装，在cmd输入如下命令，显示如图一</font></strong></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">perl -v</span><br></pre></td></tr></table></figure>
+<p><img src="/picture/QT/%E5%85%B3%E4%BA%8Ewindows%E4%B8%8BQT%E6%A8%A1%E5%9D%97%E5%8C%96%E5%AE%89%E8%A3%85/1.png" class="lazyload placeholder" data-srcset="/picture/QT/%E5%85%B3%E4%BA%8Ewindows%E4%B8%8BQT%E6%A8%A1%E5%9D%97%E5%8C%96%E5%AE%89%E8%A3%85/1.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="图一"></p>
+<h1 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h1><h2 id="1-QT-ERROR-Unknown-module-s-in-QT-xlsx"><a href="#1-QT-ERROR-Unknown-module-s-in-QT-xlsx" class="headerlink" title="1.QT ERROR: Unknown module(s) in QT: xlsx"></a>1.QT ERROR: Unknown module(s) in QT: xlsx</h2><h3 id="这是由于没有安装xlsx模块所导致的，xlsx模块下载地址"><a href="#这是由于没有安装xlsx模块所导致的，xlsx模块下载地址" class="headerlink" title="这是由于没有安装xlsx模块所导致的，xlsx模块下载地址"></a><strong><font size="4">这是由于没有安装xlsx模块所导致的，xlsx模块下载地址</font></strong></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/dbzhang800/QtXlsxWriter</span><br></pre></td></tr></table></figure>
+<h3 id="打开QT5-xx-x-MinGW-64bit-的cmd环境，cd进入xlsx模块的解压地址下的src文件，如"><a href="#打开QT5-xx-x-MinGW-64bit-的cmd环境，cd进入xlsx模块的解压地址下的src文件，如" class="headerlink" title="打开QT5.xx.x(MinGW-64bit)的cmd环境，cd进入xlsx模块的解压地址下的src文件，如"></a><strong><font size="4">打开QT5.xx.x(MinGW-64bit)的cmd环境，cd进入xlsx模块的解压地址下的src文件，如<font></strong></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> C:\Users\xxx\Desktop\QtXlsxWriter-master\src</span><br></pre></td></tr></table></figure>
+<h3 id="使用这三个命令"><a href="#使用这三个命令" class="headerlink" title="使用这三个命令"></a><strong><font size="4">使用这三个命令<font></strong></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">qmake src.pro</span><br><span class="line">mingw32-make</span><br><span class="line">mingw32-make install</span><br></pre></td></tr></table></figure>
+<h3 id="即可安装完成，再次打开工程，不再报错QT-ERROR-Unknown-module-s-in-QT-xlsx"><a href="#即可安装完成，再次打开工程，不再报错QT-ERROR-Unknown-module-s-in-QT-xlsx" class="headerlink" title="即可安装完成，再次打开工程，不再报错QT ERROR: Unknown module(s) in QT: xlsx"></a><strong><font size="4">即可安装完成，再次打开工程，不再报错QT ERROR: Unknown module(s) in QT: xlsx<font></strong></h3>
       </div>
       <div class="post-tags-categories">
         
         <div class="tags">
           
-            <a href="/tags/Linux/" class="">
-              Linux
+            <a href="/tags/QT/" class="">
+              QT
             </a>
           
         </div>
@@ -699,7 +681,7 @@
     </li>
     <li class="post-copyright-link">
     <strong>文章链接:  </strong>
-    <a href="/2024/05/01/Linux/Linux内核编译/安装arm-gcc-linux编译链/" target="_blank" title="arm-gcc-linux编译链">https://blog.t-glasswarm.com/2024/05/01/Linux/Linux内核编译/安装arm-gcc-linux编译链/</a>
+    <a href="/2024/07/14/QT/3关于windows下QT模块化安装/关于windows下QT模块化安装/" target="_blank" title="关于windows下QT模块化安装">https://blog.t-glasswarm.com/2024/07/14/QT/3关于windows下QT模块化安装/关于windows下QT模块化安装/</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明:   </strong>
@@ -717,47 +699,26 @@
 
 
 
-  
-  <div class="post-nav-prev post-nav-item">
-    <div class="post-nav-img" style="background-size: cover; 
-      background-position: center center;">
-      <img class="lazyload lazyload placeholder" src="/picture/QT/%E5%85%B3%E4%BA%8Ewindows%E4%B8%8BQT%E6%A8%A1%E5%9D%97%E5%8C%96%E5%AE%89%E8%A3%85/theme.png" class="lazyload placeholder" data-srcset="/picture/QT/%E5%85%B3%E4%BA%8Ewindows%E4%B8%8BQT%E6%A8%A1%E5%9D%97%E5%8C%96%E5%AE%89%E8%A3%85/theme.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
-    </div>
-    <a href="/2024/07/14/QT/3%E5%85%B3%E4%BA%8Ewindows%E4%B8%8BQT%E6%A8%A1%E5%9D%97%E5%8C%96%E5%AE%89%E8%A3%85/%E5%85%B3%E4%BA%8Ewindows%E4%B8%8BQT%E6%A8%A1%E5%9D%97%E5%8C%96%E5%AE%89%E8%A3%85/" class="post-nav-link">
-      <div class="title">
-        <i class="fas fa-angle-left"></i> 上一篇:
-        <div class="title-text">关于windows下QT模块化安装</div>
-      </div>
-      
-      <!-- <div class="content">
-        准备1、QT环境，可以直接任务栏搜QT5.xx.x(MinGW-64bit)之类的2、perl环境,下载地址,右方的Re
-      </div> -->
-    </a>
-  </div>
-
 
 
   
   <div class="post-nav-next post-nav-item">
     <div class="post-nav-img" style="background-size: cover; 
       background-position: center center;">
-      <img class="lazyload lazyload placeholder" src="/picture/Linux/Linux%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/theme.png" class="lazyload placeholder" data-srcset="/picture/Linux/Linux%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/theme.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" src="" alt="">
+      <img class="lazyload lazyload placeholder" src="/picture/Linux/Linux%E7%BC%96%E8%AF%91%E5%86%85%E6%A0%B8/theme.png" class="lazyload placeholder" data-srcset="/picture/Linux/Linux%E7%BC%96%E8%AF%91%E5%86%85%E6%A0%B8/theme.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" src="" alt="">
     </div>
-    <a href="/2024/05/01/Linux/Linux%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/linux%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/" class="post-nav-link">
+    <a href="/2024/05/01/Linux/Linux%E5%86%85%E6%A0%B8%E7%BC%96%E8%AF%91/%E5%AE%89%E8%A3%85arm-gcc-linux%E7%BC%96%E8%AF%91%E9%93%BE/" class="post-nav-link">
       <div class="title">
         下一篇: <i class="fas fa-angle-right"></i>
-        <div class="title-text">Linux常用指令</div>
+        <div class="title-text">arm-gcc-linux编译链</div>
       </div>
       <!-- <div class="content">
         
-调整屏幕分辨率
-1sudo xrandr -s 1280x768
+下载一个arm-gcc-linux.tar.gz文件,并解压
 
 
-
-安装deb包命令
-
-1sudo dpkg -i
+将bin文件添加到环境变量中
+1sudo vim ~
       </div> -->
     </a>
   </div>
@@ -978,7 +939,7 @@
   <div class='content'>
     <div class="toc-main">
       <div class="toc-content">
-        <!--  -->
+        <!-- <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%87%86%E5%A4%87"><span class="toc-text">准备</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81QT%E7%8E%AF%E5%A2%83%EF%BC%8C%E5%8F%AF%E4%BB%A5%E7%9B%B4%E6%8E%A5%E4%BB%BB%E5%8A%A1%E6%A0%8F%E6%90%9CQT5-xx-x-MinGW-64bit-%E4%B9%8B%E7%B1%BB%E7%9A%84"><span class="toc-text">1、QT环境，可以直接任务栏搜QT5.xx.x(MinGW-64bit)之类的</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81perl%E7%8E%AF%E5%A2%83-%E4%B8%8B%E8%BD%BD%E5%9C%B0%E5%9D%80-%E5%8F%B3%E6%96%B9%E7%9A%84Releases-%E4%B8%8B%E8%BD%BDmsl%E6%96%87%E4%BB%B6"><span class="toc-text">2、perl环境,下载地址,右方的Releases,下载msl文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%B9%E6%8D%AE%E5%BC%95%E5%AF%BC%E5%AE%8C%E6%88%90%E5%AE%89%E8%A3%85%EF%BC%8C%E5%9C%A8cmd%E8%BE%93%E5%85%A5%E5%A6%82%E4%B8%8B%E5%91%BD%E4%BB%A4%EF%BC%8C%E6%98%BE%E7%A4%BA%E5%A6%82%E5%9B%BE%E4%B8%80"><span class="toc-text">根据引导完成安装，在cmd输入如下命令，显示如图一</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BE%8B%E5%AD%90"><span class="toc-text">例子</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-QT-ERROR-Unknown-module-s-in-QT-xlsx"><span class="toc-text">1.QT ERROR: Unknown module(s) in QT: xlsx</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%99%E6%98%AF%E7%94%B1%E4%BA%8E%E6%B2%A1%E6%9C%89%E5%AE%89%E8%A3%85xlsx%E6%A8%A1%E5%9D%97%E6%89%80%E5%AF%BC%E8%87%B4%E7%9A%84%EF%BC%8Cxlsx%E6%A8%A1%E5%9D%97%E4%B8%8B%E8%BD%BD%E5%9C%B0%E5%9D%80"><span class="toc-text">这是由于没有安装xlsx模块所导致的，xlsx模块下载地址</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%93%E5%BC%80QT5-xx-x-MinGW-64bit-%E7%9A%84cmd%E7%8E%AF%E5%A2%83%EF%BC%8Ccd%E8%BF%9B%E5%85%A5xlsx%E6%A8%A1%E5%9D%97%E7%9A%84%E8%A7%A3%E5%8E%8B%E5%9C%B0%E5%9D%80%E4%B8%8B%E7%9A%84src%E6%96%87%E4%BB%B6%EF%BC%8C%E5%A6%82"><span class="toc-text">打开QT5.xx.x(MinGW-64bit)的cmd环境，cd进入xlsx模块的解压地址下的src文件，如</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E8%BF%99%E4%B8%89%E4%B8%AA%E5%91%BD%E4%BB%A4"><span class="toc-text">使用这三个命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%B3%E5%8F%AF%E5%AE%89%E8%A3%85%E5%AE%8C%E6%88%90%EF%BC%8C%E5%86%8D%E6%AC%A1%E6%89%93%E5%BC%80%E5%B7%A5%E7%A8%8B%EF%BC%8C%E4%B8%8D%E5%86%8D%E6%8A%A5%E9%94%99QT-ERROR-Unknown-module-s-in-QT-xlsx"><span class="toc-text">即可安装完成，再次打开工程，不再报错QT ERROR: Unknown module(s) in QT: xlsx</span></a></li></ol></li></ol></li></ol> -->
         <div class="toc"></div>
       </div>
     </div>

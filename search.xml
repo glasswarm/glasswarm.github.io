@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>关于windows下QT模块化安装</title>
+      <link href="/2024/07/14/QT/3%E5%85%B3%E4%BA%8Ewindows%E4%B8%8BQT%E6%A8%A1%E5%9D%97%E5%8C%96%E5%AE%89%E8%A3%85/%E5%85%B3%E4%BA%8Ewindows%E4%B8%8BQT%E6%A8%A1%E5%9D%97%E5%8C%96%E5%AE%89%E8%A3%85/"/>
+      <url>/2024/07/14/QT/3%E5%85%B3%E4%BA%8Ewindows%E4%B8%8BQT%E6%A8%A1%E5%9D%97%E5%8C%96%E5%AE%89%E8%A3%85/%E5%85%B3%E4%BA%8Ewindows%E4%B8%8BQT%E6%A8%A1%E5%9D%97%E5%8C%96%E5%AE%89%E8%A3%85/</url>
+      
+        <content type="html"><![CDATA[<h1 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h1><h3 id="1、QT环境，可以直接任务栏搜QT5-xx-x-MinGW-64bit-之类的"><a href="#1、QT环境，可以直接任务栏搜QT5-xx-x-MinGW-64bit-之类的" class="headerlink" title="1、QT环境，可以直接任务栏搜QT5.xx.x(MinGW-64bit)之类的"></a><strong><font size="4">1、QT环境，可以直接任务栏搜QT5.xx.x(MinGW-64bit)之类的</font></strong></h3><h3 id="2、perl环境-下载地址-右方的Releases-下载msl文件"><a href="#2、perl环境-下载地址-右方的Releases-下载msl文件" class="headerlink" title="2、perl环境,下载地址,右方的Releases,下载msl文件"></a><strong><font size="4">2、perl环境,下载地址,右方的Releases,下载msl文件</font></strong></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/StrawberryPerl/Perl-Dist-Strawberry</span><br></pre></td></tr></table></figure><h3 id="根据引导完成安装，在cmd输入如下命令，显示如图一"><a href="#根据引导完成安装，在cmd输入如下命令，显示如图一" class="headerlink" title="根据引导完成安装，在cmd输入如下命令，显示如图一"></a><strong><font size="4">根据引导完成安装，在cmd输入如下命令，显示如图一</font></strong></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">perl -v</span><br></pre></td></tr></table></figure><p><img src="/picture/QT/%E5%85%B3%E4%BA%8Ewindows%E4%B8%8BQT%E6%A8%A1%E5%9D%97%E5%8C%96%E5%AE%89%E8%A3%85/1.png" class="lazyload placeholder" data-srcset="/picture/QT/%E5%85%B3%E4%BA%8Ewindows%E4%B8%8BQT%E6%A8%A1%E5%9D%97%E5%8C%96%E5%AE%89%E8%A3%85/1.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="图一"></p><h1 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h1><h2 id="1-QT-ERROR-Unknown-module-s-in-QT-xlsx"><a href="#1-QT-ERROR-Unknown-module-s-in-QT-xlsx" class="headerlink" title="1.QT ERROR: Unknown module(s) in QT: xlsx"></a>1.QT ERROR: Unknown module(s) in QT: xlsx</h2><h3 id="这是由于没有安装xlsx模块所导致的，xlsx模块下载地址"><a href="#这是由于没有安装xlsx模块所导致的，xlsx模块下载地址" class="headerlink" title="这是由于没有安装xlsx模块所导致的，xlsx模块下载地址"></a><strong><font size="4">这是由于没有安装xlsx模块所导致的，xlsx模块下载地址</font></strong></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/dbzhang800/QtXlsxWriter</span><br></pre></td></tr></table></figure><h3 id="打开QT5-xx-x-MinGW-64bit-的cmd环境，cd进入xlsx模块的解压地址下的src文件，如"><a href="#打开QT5-xx-x-MinGW-64bit-的cmd环境，cd进入xlsx模块的解压地址下的src文件，如" class="headerlink" title="打开QT5.xx.x(MinGW-64bit)的cmd环境，cd进入xlsx模块的解压地址下的src文件，如"></a><strong><font size="4">打开QT5.xx.x(MinGW-64bit)的cmd环境，cd进入xlsx模块的解压地址下的src文件，如<font></strong></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> C:\Users\xxx\Desktop\QtXlsxWriter-master\src</span><br></pre></td></tr></table></figure><h3 id="使用这三个命令"><a href="#使用这三个命令" class="headerlink" title="使用这三个命令"></a><strong><font size="4">使用这三个命令<font></strong></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">qmake src.pro</span><br><span class="line">mingw32-make</span><br><span class="line">mingw32-make install</span><br></pre></td></tr></table></figure><h3 id="即可安装完成，再次打开工程，不再报错QT-ERROR-Unknown-module-s-in-QT-xlsx"><a href="#即可安装完成，再次打开工程，不再报错QT-ERROR-Unknown-module-s-in-QT-xlsx" class="headerlink" title="即可安装完成，再次打开工程，不再报错QT ERROR: Unknown module(s) in QT: xlsx"></a><strong><font size="4">即可安装完成，再次打开工程，不再报错QT ERROR: Unknown module(s) in QT: xlsx<font></strong></h3>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> QT </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>arm-gcc-linux编译链</title>
       <link href="/2024/05/01/Linux/Linux%E5%86%85%E6%A0%B8%E7%BC%96%E8%AF%91/%E5%AE%89%E8%A3%85arm-gcc-linux%E7%BC%96%E8%AF%91%E9%93%BE/"/>
       <url>/2024/05/01/Linux/Linux%E5%86%85%E6%A0%B8%E7%BC%96%E8%AF%91/%E5%AE%89%E8%A3%85arm-gcc-linux%E7%BC%96%E8%AF%91%E9%93%BE/</url>
