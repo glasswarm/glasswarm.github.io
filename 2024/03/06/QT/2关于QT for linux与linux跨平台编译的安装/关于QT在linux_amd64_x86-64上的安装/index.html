@@ -694,7 +694,7 @@
 </blockquote>
 <h2 id="QT5-12-8安装"><a href="#QT5-12-8安装" class="headerlink" title="QT5.12.8安装"></a>QT5.12.8安装</h2><ul>
 <li><strong><font size="4">依赖安装</font></strong><blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install libxcb-xfixes0-dev libxcb-util-dev</span><br><span class="line">sudo apt-get install libxcb-xinerama0</span><br><span class="line">sudo apt-get install build-essential libgl1-mesa-dev</span><br></pre></td></tr></table></figure></blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install libxcb-xfixes0-dev libxcb-util-dev</span><br><span class="line">sudo apt-get install libxcb-xinerama0</span><br><span class="line">sudo apt-get install build-essential libgl1-mesa-dev</span><br><span class="line">sudo apt-get install libxcb* </span><br><span class="line">sudo apt-get install libxkbcommon*</span><br></pre></td></tr></table></figure></blockquote>
 </li>
 </ul>
 <ul>
@@ -702,7 +702,7 @@
 <li><strong><font size="4">解压缩</font></strong><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo tar -xvf qt-everywhere-src-5.12.8.tar.xz</span><br></pre></td></tr></table></figure></li>
 </ul>
 <ul>
-<li><strong><font size="4">终端进入QT源码文件夹，输入下指令，跳过一些不必要的模块(根据自己的需求)</font></strong><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./configure -prefix /opt/qt5.12.8/qt5.12.8 -release -opensource -skip qtwayland -skip qtlocation -skip qtscript -skip qt3d -skip qtcanvas3d -skip datavis3d -skip qt virtualkeyboard -platform linux-g++</span><br></pre></td></tr></table></figure>
+<li><strong><font size="4">终端进入QT源码文件夹，输入下指令，跳过一些不必要的模块(根据自己的需求)</font></strong><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./configure -prefix /opt/qt5.12.8/qt5.12.8 -release -opensource -skip qtwayland -skip qtlocation -skip qtscript -skip qt3d -skip qtcanvas3d -skip datavis3d -skip qtvirtualkeyboard -platform linux-g++</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p><strong><font size="4">configure参数解析</font></strong><br><strong><font size="4">CSDN(粗略) <a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_37654240/article/details/109639331">https://blog.csdn.net/qq_37654240/article/details/109639331</a></font></strong><br><strong><font size="4">博客(较深) <a target="_blank" rel="noopener" href="https://www.cnblogs.com/findumars/p/6254629.html">https://www.cnblogs.com/findumars/p/6254629.html</a></font></strong><br><strong><font size="4">-opensource表示使用开源版本，-confirm-license表示确认许可，-prefix表示安装路径</font></strong></p>
 </blockquote>
@@ -795,7 +795,7 @@
     </li>
     <li class="post-copyright-link">
     <strong>文章链接:  </strong>
-    <a href="/2024/03/06/QT/2关于QT for linux与linux跨平台编译的安装/关于QT在linux_amd64_x86-64上的安装/" target="_blank" title="关于QT在linux_amd64_x86-64上的安装">https://blog.t-glasswarm.com/2024/03/06/QT/2关于QT for linux与linux跨平台编译的安装/关于QT在linux_amd64_x86-64上的安装/</a>
+    <a href="/2024/03/06/QT/2关于QT for linux与linux跨平台编译的安装/关于QT在linux_amd64_x86-64上的安装/" target="_blank" title="关于QT在linux_amd64_x86-64上的安装">http://glasswarm.github.io/2024/03/06/QT/2关于QT for linux与linux跨平台编译的安装/关于QT在linux_amd64_x86-64上的安装/</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明:   </strong>
@@ -1110,18 +1110,18 @@
             
 
             <div class="post-img-box">
-              <a href="/2024/08/02/STM32/FATFS%E7%9B%B8%E5%85%B3/%E5%85%B3%E4%BA%8EFATFS/" class="post-img " style="background-size: cover; 
+              <a href="/2024/10/03/%E7%BD%91%E9%A1%B5Web/Web%E5%89%8D%E7%AB%AF/Web%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86/" class="post-img " style="background-size: cover; 
                 background-position: center center;">
-                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="/picture/STM32/FATFS%E7%9B%B8%E5%85%B3/theme.png" class="lazyload placeholder" data-srcset="/picture/STM32/FATFS%E7%9B%B8%E5%85%B3/theme.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="/picture/ESP32/esp-idf%E7%9A%84%E5%AE%89%E8%A3%85/theme.png" class="lazyload placeholder" data-srcset="/picture/ESP32/esp-idf%E7%9A%84%E5%AE%89%E8%A3%85/theme.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
               </a>
             </div>
             <div class="post-date-title">
               <div>
                 
-                  <span class="post-date">08-02</span>
+                  <span class="post-date">10-03</span>
                 
               </div>
-              <a class="post-title" href="/2024/08/02/STM32/FATFS%E7%9B%B8%E5%85%B3/%E5%85%B3%E4%BA%8EFATFS/">关于FATFS</a>
+              <a class="post-title" href="/2024/10/03/%E7%BD%91%E9%A1%B5Web/Web%E5%89%8D%E7%AB%AF/Web%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86/">Web前端知识</a>
             </div>
           </div>
         
@@ -1131,18 +1131,18 @@
             
 
             <div class="post-img-box">
-              <a href="/2024/07/31/VSCode/C_Cpp/%E5%A4%9A%E7%9B%AE%E5%BD%95%E4%B8%8BCMakeLists%E5%86%99%E6%B3%95/" class="post-img " style="background-size: cover; 
+              <a href="/2024/09/04/ESP32/esp-idf%E7%BC%96%E8%AF%91/esp-idf%E7%BC%96%E8%AF%91%E9%81%87%E5%88%B0%E7%9A%84%E5%9D%91/" class="post-img " style="background-size: cover; 
                 background-position: center center;">
-                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="/picture/VSCode/C_Cpp/%E5%A4%9A%E7%9B%AE%E5%BD%95%E4%B8%8BCMakeLists%E5%86%99%E6%B3%95/theme.png" class="lazyload placeholder" data-srcset="/picture/VSCode/C_Cpp/%E5%A4%9A%E7%9B%AE%E5%BD%95%E4%B8%8BCMakeLists%E5%86%99%E6%B3%95/theme.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="/picture/ESP32/esp-idf%E7%BC%96%E8%AF%91/theme.png" class="lazyload placeholder" data-srcset="/picture/ESP32/esp-idf%E7%BC%96%E8%AF%91/theme.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
               </a>
             </div>
             <div class="post-date-title">
               <div>
                 
-                  <span class="post-date">07-31</span>
+                  <span class="post-date">09-04</span>
                 
               </div>
-              <a class="post-title" href="/2024/07/31/VSCode/C_Cpp/%E5%A4%9A%E7%9B%AE%E5%BD%95%E4%B8%8BCMakeLists%E5%86%99%E6%B3%95/">多目录下CMakeLists写法</a>
+              <a class="post-title" href="/2024/09/04/ESP32/esp-idf%E7%BC%96%E8%AF%91/esp-idf%E7%BC%96%E8%AF%91%E9%81%87%E5%88%B0%E7%9A%84%E5%9D%91/">esp-idf编译遇到的坑</a>
             </div>
           </div>
         
@@ -1152,18 +1152,18 @@
             
 
             <div class="post-img-box">
-              <a href="/2024/07/31/VSCode/C_Cpp/CMakeLists%E7%94%A8%E6%B3%95/" class="post-img " style="background-size: cover; 
+              <a href="/2024/09/03/ESP32/esp-idf%E7%9A%84%E5%AE%89%E8%A3%85/esp-idf%E7%9A%84%E5%AE%89%E8%A3%85/" class="post-img " style="background-size: cover; 
                 background-position: center center;">
-                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="/picture/VSCode/C_Cpp/CMakeLists/theme.png" class="lazyload placeholder" data-srcset="/picture/VSCode/C_Cpp/CMakeLists/theme.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="/picture/ESP32/esp-idf%E7%9A%84%E5%AE%89%E8%A3%85/theme.png" class="lazyload placeholder" data-srcset="/picture/ESP32/esp-idf%E7%9A%84%E5%AE%89%E8%A3%85/theme.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
               </a>
             </div>
             <div class="post-date-title">
               <div>
                 
-                  <span class="post-date">07-31</span>
+                  <span class="post-date">09-03</span>
                 
               </div>
-              <a class="post-title" href="/2024/07/31/VSCode/C_Cpp/CMakeLists%E7%94%A8%E6%B3%95/">CMakeList的常用语法</a>
+              <a class="post-title" href="/2024/09/03/ESP32/esp-idf%E7%9A%84%E5%AE%89%E8%A3%85/esp-idf%E7%9A%84%E5%AE%89%E8%A3%85/">esp-idf的安装</a>
             </div>
           </div>
         
@@ -1173,18 +1173,18 @@
             
 
             <div class="post-img-box">
-              <a href="/2024/07/30/VSCode/C_Cpp/vscode%E9%85%8D%E7%BD%AEc%E6%96%87%E4%BB%B6%E7%9A%84%E8%BF%90%E8%A1%8C2_CMake/" class="post-img " style="background-size: cover; 
+              <a href="/2024/08/29/Mircosoft/Visio%E5%AE%89%E8%A3%85/Visio%E5%AE%89%E8%A3%85/" class="post-img " style="background-size: cover; 
                 background-position: center center;">
-                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="/picture/VSCode/C_Cpp/C_Cpp%E7%9A%84%E9%85%8D%E7%BD%AE/CMake/theme.png" class="lazyload placeholder" data-srcset="/picture/VSCode/C_Cpp/C_Cpp%E7%9A%84%E9%85%8D%E7%BD%AE/CMake/theme.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="/picture/Mircosoft/Visio%E5%AE%89%E8%A3%85/theme.png" class="lazyload placeholder" data-srcset="/picture/Mircosoft/Visio%E5%AE%89%E8%A3%85/theme.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
               </a>
             </div>
             <div class="post-date-title">
               <div>
                 
-                  <span class="post-date">07-30</span>
+                  <span class="post-date">08-29</span>
                 
               </div>
-              <a class="post-title" href="/2024/07/30/VSCode/C_Cpp/vscode%E9%85%8D%E7%BD%AEc%E6%96%87%E4%BB%B6%E7%9A%84%E8%BF%90%E8%A1%8C2_CMake/">vscode配置c文件的运行2_CMake</a>
+              <a class="post-title" href="/2024/08/29/Mircosoft/Visio%E5%AE%89%E8%A3%85/Visio%E5%AE%89%E8%A3%85/">Visio安装</a>
             </div>
           </div>
         
@@ -1194,18 +1194,18 @@
             
 
             <div class="post-img-box">
-              <a href="/2024/07/30/VSCode/C_Cpp/vscode%E9%85%8D%E7%BD%AEc%E6%96%87%E4%BB%B6%E7%9A%84%E8%BF%90%E8%A1%8C1_json(%E4%B8%8D%E6%8E%A8%E8%8D%90)/" class="post-img " style="background-size: cover; 
+              <a href="/2024/08/16/RTOS/Freertos/%E5%85%B3%E4%BA%8EFreertos%E7%9A%84%E4%B8%80%E4%BA%9B%E5%87%BD%E6%95%B0/" class="post-img " style="background-size: cover; 
                 background-position: center center;">
-                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="/picture/VSCode/C_Cpp/C_Cpp%E7%9A%84%E9%85%8D%E7%BD%AE/json/theme.png" class="lazyload placeholder" data-srcset="/picture/VSCode/C_Cpp/C_Cpp%E7%9A%84%E9%85%8D%E7%BD%AE/json/theme.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="/picture/RTOS/Freertos/theme.png" class="lazyload placeholder" data-srcset="/picture/RTOS/Freertos/theme.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
               </a>
             </div>
             <div class="post-date-title">
               <div>
                 
-                  <span class="post-date">07-30</span>
+                  <span class="post-date">08-16</span>
                 
               </div>
-              <a class="post-title" href="/2024/07/30/VSCode/C_Cpp/vscode%E9%85%8D%E7%BD%AEc%E6%96%87%E4%BB%B6%E7%9A%84%E8%BF%90%E8%A1%8C1_json(%E4%B8%8D%E6%8E%A8%E8%8D%90)/">vscode配置c文件的运行1_json(不推荐)</a>
+              <a class="post-title" href="/2024/08/16/RTOS/Freertos/%E5%85%B3%E4%BA%8EFreertos%E7%9A%84%E4%B8%80%E4%BA%9B%E5%87%BD%E6%95%B0/">关于Freertos的一些函数</a>
             </div>
           </div>
         
