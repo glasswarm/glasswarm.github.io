@@ -621,7 +621,7 @@
       
         <div class="post-detail-header_wordcount">
           <span class="totalcount">
-            <i class="fas fa-file-text-o"></i> 字数统计: 324 |
+            <i class="fas fa-file-text-o"></i> 字数统计: 387 |
           </span>
   
           <span class="min2read">
@@ -667,9 +667,13 @@
 <h2 id="报错"><a href="#报错" class="headerlink" title="报错"></a>报错</h2><h3 id="1-is-not-a-valid-Win32-application"><a href="#1-is-not-a-valid-Win32-application" class="headerlink" title="%1 is not a valid Win32 application"></a><strong>%1 is not a valid Win32 application</strong></h3><h4 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h4><p><b>it looks like the MSIX version of wsl.exe is corrupted, which is causing that error.And then installing the latest MSI solve the issue.(下载最新版的wsl版本)</b></p>
 <h4 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h4><p>在powershell输入,删除wsl当前版本</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Get-AppxPackage MicrosoftCorporationII.WindowsSubsystemforLinux -AllUsers  | Remove-AppxPackage -AllUsers</span><br></pre></td></tr></table></figure>
-<p>然后在github下载最新的wsl安装包，根据windows下的引导安装。<br><br>安装完成后打开PowerShell或者CMD输入</p>
+<p>然后在github下载最新的wsl安装包，根据windows下的引导安装。<br></p>
+<p>安装完成后打开PowerShell或者CMD输入</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wsl --install</span><br></pre></td></tr></table></figure>
-<p>即可完成安装</p>
+<p>即可完成安装<br></p>
+<p>若想查看安装的是wsl2还是wsl，在输入</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wsl --list --verbose</span><br></pre></td></tr></table></figure>
+<p>输出将显示 WSL 中已安装的 Linux 发行版，以及它们的版本。在 “WSL” 列下可以将看到 “wsl” 或 “wsl2”，这表示每个发行版的 WSL 版本。</p>
 
       </div>
       <div class="post-tags-categories">
