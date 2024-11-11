@@ -621,7 +621,7 @@
       
         <div class="post-detail-header_wordcount">
           <span class="totalcount">
-            <i class="fas fa-file-text-o"></i> 字数统计: 967 |
+            <i class="fas fa-file-text-o"></i> 字数统计: 991 |
           </span>
   
           <span class="min2read">
@@ -707,9 +707,11 @@
 <li><p><strong><font size="4">add_library 是 CMake 构建系统中用于创建项目内库的核心命令。这个命令允许你指定库的源文件并定义其类型。该</font></strong> </p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">add_library(&lt;name&gt; [STATIC | SHARED | MODULE] [EXCLUDE_FROM_ALL] [source1] [source2] [...])</span><br></pre></td></tr></table></figure>
 <blockquote>
-<p><strong><font size="4">两者的主要区别在于最终产物的用途：add_executable 生成的可执行文件直接运行，而 add_library 生成的库则被其他目标所链接。此外，可执行文件和库在构建过程中的处理方式可能会有所不同，因为它们可能会被不同的项目或最终用户以不同的方式使用。</font></strong></p>
+<p><strong><font size="4">两者的主要区别在于最终产物的用途：add_executable 生成的可执行文件直接运行，而 add_library 生成的库则被其他目标所链接。此外，可执行文件和库在构建过程中的处理方式可能会有所不同，因为它们可能会被不同的项目或最终用户以不同的方式使用。</font></strong> </p>
 </blockquote>
 </li>
+<li><p><strong><font size="4">当你想要生成dll时，需要在使用SHARED参数</font></strong> </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">add_library(&lt;name&gt; SHARED [EXCLUDE_FROM_ALL] [source1] [source2] [...])</span><br></pre></td></tr></table></figure></li>
 </ul>
 
       </div>
@@ -1037,6 +1039,27 @@
             
 
             <div class="post-img-box">
+              <a href="/2024/11/05/WSL/wsl%E7%9A%84%E5%AE%89%E8%A3%85/" class="post-img " style="background-size: cover; 
+                background-position: center center;">
+                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="/picture/WSL/theme.png" class="lazyload placeholder" data-srcset="/picture/WSL/theme.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+              </a>
+            </div>
+            <div class="post-date-title">
+              <div>
+                
+                  <span class="post-date">11-05</span>
+                
+              </div>
+              <a class="post-title" href="/2024/11/05/WSL/wsl%E7%9A%84%E5%AE%89%E8%A3%85/">wsl的安装</a>
+            </div>
+          </div>
+        
+          <div class="aside-list-item">
+            
+            
+            
+
+            <div class="post-img-box">
               <a href="/2024/10/03/%E7%BD%91%E9%A1%B5Web/Web%E5%89%8D%E7%AB%AF/Web%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86/" class="post-img " style="background-size: cover; 
                 background-position: center center;">
                 <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="/picture/ESP32/esp-idf%E7%9A%84%E5%AE%89%E8%A3%85/theme.png" class="lazyload placeholder" data-srcset="/picture/ESP32/esp-idf%E7%9A%84%E5%AE%89%E8%A3%85/theme.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
@@ -1112,27 +1135,6 @@
                 
               </div>
               <a class="post-title" href="/2024/08/29/Mircosoft/Visio%E5%AE%89%E8%A3%85/Visio%E5%AE%89%E8%A3%85/">Visio安装</a>
-            </div>
-          </div>
-        
-          <div class="aside-list-item">
-            
-            
-            
-
-            <div class="post-img-box">
-              <a href="/2024/08/16/RTOS/Freertos/%E5%85%B3%E4%BA%8EFreertos%E7%9A%84%E4%B8%80%E4%BA%9B%E5%87%BD%E6%95%B0/" class="post-img " style="background-size: cover; 
-                background-position: center center;">
-                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="/picture/RTOS/Freertos/theme.png" class="lazyload placeholder" data-srcset="/picture/RTOS/Freertos/theme.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
-              </a>
-            </div>
-            <div class="post-date-title">
-              <div>
-                
-                  <span class="post-date">08-16</span>
-                
-              </div>
-              <a class="post-title" href="/2024/08/16/RTOS/Freertos/%E5%85%B3%E4%BA%8EFreertos%E7%9A%84%E4%B8%80%E4%BA%9B%E5%87%BD%E6%95%B0/">关于Freertos的一些函数</a>
             </div>
           </div>
         
