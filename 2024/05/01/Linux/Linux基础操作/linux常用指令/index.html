@@ -621,7 +621,7 @@
       
         <div class="post-detail-header_wordcount">
           <span class="totalcount">
-            <i class="fas fa-file-text-o"></i> 字数统计: 292 |
+            <i class="fas fa-file-text-o"></i> 字数统计: 276 |
           </span>
   
           <span class="min2read">
@@ -652,71 +652,36 @@
   <div class="main-content">
     <article class="post post-detail">
       <div class="post-content">
-        <ul>
-<li><strong><font size="4">调整屏幕分辨率</font></strong><blockquote>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo xrandr -s 1280x768</span><br></pre></td></tr></table></figure></blockquote>
-</li>
-</ul>
-<ul>
-<li><p><strong><font size="4">安装deb包命令</font></strong></p>
-<blockquote>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo dpkg -i xxx.deb</span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
-<li><p><strong><font size="4">查看ubuntu的ip命令</font></strong></p>
-<blockquote>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ip addr</span><br></pre></td></tr></table></figure></blockquote>
-</li>
-<li><p><strong><font size="4">查看ubuntu的ip命令_2,ifconfig下载依赖</font></strong></p>
-<blockquote>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install net-tools</span><br></pre></td></tr></table></figure></blockquote>
-</li>
-</ul>
-<ul>
-<li><strong><font size="4">安装ssh依赖</font></strong><blockquote>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install ssh openssh-server</span><br></pre></td></tr></table></figure></blockquote>
-</li>
-</ul>
-<ul>
-<li><strong><font size="4">解压tar.xz文件</font></strong><blockquote>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo tar -xvf xxx.tar.xz</span><br></pre></td></tr></table></figure></blockquote>
-</li>
-</ul>
-<ul>
-<li><strong><font size="4">设置开机自启动</font></strong><blockquote>
-<p><strong><font size="4">在&#x2F;etc&#x2F;systemd&#x2F;system&#x2F; 目录中创建一个单元文件，并确定它有正确的文件权限</font></strong></p>
-<blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo <span class="built_in">touch</span> /etc/systemd/system/name.service</span><br><span class="line">sudo <span class="built_in">chmod</span> 664 /etc/systemd/system/name.service</span><br><span class="line">sudo vim name.service</span><br></pre></td></tr></table></figure>
-<p><strong><font size="4">输入如下内容</font></strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[Unit]</span><br><span class="line">Description=service_description</span><br><span class="line">After=network.target</span><br><span class="line"></span><br><span class="line">[Service]</span><br><span class="line">ExecStart=/xxx/xxx.sh</span><br><span class="line"></span><br><span class="line">[Install]</span><br><span class="line">WantedBy=default.target</span><br></pre></td></tr></table></figure>
-<p><strong><font size="4">Description表示服务名字,After表示服务何时启动，After&#x3D;network.service 表示网络连接完成后，启动我们的服务；</font></strong><br><strong><font size="4">ExecStart表示我们的脚本xxx.sh的路径；WantedBy默认填default.target</font></strong></p>
-</blockquote>
-</blockquote>
-</li>
-</ul>
-<ul>
-<li><strong><font size="4">当有左下方有more时，按Q退出浏览</font></strong><blockquote>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo tar -xvf xxx.tar.xz</span><br></pre></td></tr></table></figure></blockquote>
-</li>
-</ul>
-<ul>
-<li><strong><font size="4">环境变量添加方法</font></strong><blockquote>
-<p>①通过编辑&#x2F;etc&#x2F;profile来改PATH<br>②改home目录下的.bashrc(即：~&#x2F;.bashrc)</p>
-</blockquote>
-</li>
-</ul>
-<ul>
-<li><p><strong><font size="4">vim常用方法</font></strong></p>
-<blockquote>
-<p>yy 复制当前行<br>5yy 复制从当前行开始的5行<br>然后用p进行粘贴<br>dd删除一行</p>
-</blockquote>
-</li>
-<li><p><strong><font size="4">查看ubuntu命令的指令</font></strong></p>
-<blockquote>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">uname -r</span><br></pre></td></tr></table></figure></blockquote>
-</li>
-</ul>
+        <h1 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h1><h2 id="调整屏幕分辨率"><a href="#调整屏幕分辨率" class="headerlink" title="调整屏幕分辨率"></a>调整屏幕分辨率</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo xrandr -s 1280x768</span><br></pre></td></tr></table></figure>
 
+<h2 id="安装deb包命令"><a href="#安装deb包命令" class="headerlink" title="安装deb包命令"></a>安装deb包命令</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo dpkg -i xxx.deb</span><br></pre></td></tr></table></figure>
+
+<h2 id="查看ubuntu的ip命令"><a href="#查看ubuntu的ip命令" class="headerlink" title="查看ubuntu的ip命令"></a>查看ubuntu的ip命令</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ip addr</span><br></pre></td></tr></table></figure>
+
+<h2 id="查看ubuntu的ip命令-2-ifconfig下载依赖"><a href="#查看ubuntu的ip命令-2-ifconfig下载依赖" class="headerlink" title="查看ubuntu的ip命令_2,ifconfig下载依赖"></a>查看ubuntu的ip命令_2,ifconfig下载依赖</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install net-tools</span><br></pre></td></tr></table></figure>
+
+<h2 id="安装ssh依赖"><a href="#安装ssh依赖" class="headerlink" title="安装ssh依赖"></a>安装ssh依赖</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install ssh openssh-server</span><br></pre></td></tr></table></figure>
+
+<h2 id="解压tar-xz文件"><a href="#解压tar-xz文件" class="headerlink" title="解压tar.xz文件"></a>解压tar.xz文件</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo tar -xvf xxx.tar.xz</span><br></pre></td></tr></table></figure>
+
+<h2 id="设置开机自启动"><a href="#设置开机自启动" class="headerlink" title="设置开机自启动"></a>设置开机自启动</h2><p>在&#x2F;etc&#x2F;systemd&#x2F;system&#x2F; 目录中创建一个单元文件，并确定它有正确的文件权限</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo <span class="built_in">touch</span> /etc/systemd/system/name.service</span><br><span class="line">sudo <span class="built_in">chmod</span> 664 /etc/systemd/system/name.service</span><br><span class="line">sudo vim name.service</span><br></pre></td></tr></table></figure>
+<p>输入如下内容</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[Unit]</span><br><span class="line">Description=service_description</span><br><span class="line">After=network.target</span><br><span class="line"></span><br><span class="line">[Service]</span><br><span class="line">ExecStart=/xxx/xxx.sh</span><br><span class="line"></span><br><span class="line">[Install]</span><br><span class="line">WantedBy=default.target</span><br></pre></td></tr></table></figure>
+<ol>
+<li>Description表示服务名字,After表示服务何时启动</li>
+<li>After&#x3D;network.service 表示网络连接完成后，启动我们的服务；</li>
+<li>ExecStart表示我们的脚本xxx.sh的路径；</li>
+<li>WantedBy默认填default.target</li>
+</ol>
+<h2 id="当终端内列出的东西数量过多，想要退出浏览"><a href="#当终端内列出的东西数量过多，想要退出浏览" class="headerlink" title="当终端内列出的东西数量过多，想要退出浏览"></a>当终端内列出的东西数量过多，想要退出浏览</h2><p><strong>左下方有more时，按Q退出浏览</strong></p>
+<h2 id="环境变量添加方法"><a href="#环境变量添加方法" class="headerlink" title="环境变量添加方法"></a>环境变量添加方法</h2><ol>
+<li>通过编辑&#x2F;etc&#x2F;profile来改PATH</li>
+<li>改home目录下的.bashrc(即：~&#x2F;.bashrc)</li>
+</ol>
+<h2 id="查看ubuntu内核的指令"><a href="#查看ubuntu内核的指令" class="headerlink" title="查看ubuntu内核的指令"></a>查看ubuntu内核的指令</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">uname -a </span><br></pre></td></tr></table></figure>
+
+<h2 id="查看ubuntu版本的指令"><a href="#查看ubuntu版本的指令" class="headerlink" title="查看ubuntu版本的指令"></a>查看ubuntu版本的指令</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lsb_release -a</span><br></pre></td></tr></table></figure>
       </div>
       <div class="post-tags-categories">
         
@@ -1015,7 +980,7 @@
   <div class='content'>
     <div class="toc-main">
       <div class="toc-content">
-        <!--  -->
+        <!-- <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="toc-text">常用命令</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B0%83%E6%95%B4%E5%B1%8F%E5%B9%95%E5%88%86%E8%BE%A8%E7%8E%87"><span class="toc-text">调整屏幕分辨率</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85deb%E5%8C%85%E5%91%BD%E4%BB%A4"><span class="toc-text">安装deb包命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8Bubuntu%E7%9A%84ip%E5%91%BD%E4%BB%A4"><span class="toc-text">查看ubuntu的ip命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8Bubuntu%E7%9A%84ip%E5%91%BD%E4%BB%A4-2-ifconfig%E4%B8%8B%E8%BD%BD%E4%BE%9D%E8%B5%96"><span class="toc-text">查看ubuntu的ip命令_2,ifconfig下载依赖</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85ssh%E4%BE%9D%E8%B5%96"><span class="toc-text">安装ssh依赖</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E5%8E%8Btar-xz%E6%96%87%E4%BB%B6"><span class="toc-text">解压tar.xz文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AE%E5%BC%80%E6%9C%BA%E8%87%AA%E5%90%AF%E5%8A%A8"><span class="toc-text">设置开机自启动</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BD%93%E7%BB%88%E7%AB%AF%E5%86%85%E5%88%97%E5%87%BA%E7%9A%84%E4%B8%9C%E8%A5%BF%E6%95%B0%E9%87%8F%E8%BF%87%E5%A4%9A%EF%BC%8C%E6%83%B3%E8%A6%81%E9%80%80%E5%87%BA%E6%B5%8F%E8%A7%88"><span class="toc-text">当终端内列出的东西数量过多，想要退出浏览</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E6%B7%BB%E5%8A%A0%E6%96%B9%E6%B3%95"><span class="toc-text">环境变量添加方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8Bubuntu%E5%86%85%E6%A0%B8%E7%9A%84%E6%8C%87%E4%BB%A4"><span class="toc-text">查看ubuntu内核的指令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8Bubuntu%E7%89%88%E6%9C%AC%E7%9A%84%E6%8C%87%E4%BB%A4"><span class="toc-text">查看ubuntu版本的指令</span></a></li></ol></li></ol> -->
         <div class="toc"></div>
       </div>
     </div>
@@ -1041,6 +1006,48 @@
       <!-- hash算法 -->
       
       <div class="aside-list">
+        
+          <div class="aside-list-item">
+            
+            
+            
+
+            <div class="post-img-box">
+              <a href="/2024/11/13/Linux/Linux%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/vim%E6%8C%87%E4%BB%A4/" class="post-img " style="background-size: cover; 
+                background-position: center center;">
+                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="/picture/Linux/vim%E6%8C%87%E4%BB%A4/theme.png" class="lazyload placeholder" data-srcset="/picture/Linux/vim%E6%8C%87%E4%BB%A4/theme.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+              </a>
+            </div>
+            <div class="post-date-title">
+              <div>
+                
+                  <span class="post-date">11-13</span>
+                
+              </div>
+              <a class="post-title" href="/2024/11/13/Linux/Linux%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/vim%E6%8C%87%E4%BB%A4/">vim指令</a>
+            </div>
+          </div>
+        
+          <div class="aside-list-item">
+            
+            
+            
+
+            <div class="post-img-box">
+              <a href="/2024/11/13/WSL/wsl%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" class="post-img " style="background-size: cover; 
+                background-position: center center;">
+                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="/picture/WSL/theme.png" class="lazyload placeholder" data-srcset="/picture/WSL/theme.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+              </a>
+            </div>
+            <div class="post-date-title">
+              <div>
+                
+                  <span class="post-date">11-13</span>
+                
+              </div>
+              <a class="post-title" href="/2024/11/13/WSL/wsl%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">wsl常用命令</a>
+            </div>
+          </div>
         
           <div class="aside-list-item">
             
@@ -1102,48 +1109,6 @@
                 
               </div>
               <a class="post-title" href="/2024/09/04/ESP32/esp-idf%E7%BC%96%E8%AF%91/esp-idf%E7%BC%96%E8%AF%91%E9%81%87%E5%88%B0%E7%9A%84%E5%9D%91/">esp-idf编译遇到的坑</a>
-            </div>
-          </div>
-        
-          <div class="aside-list-item">
-            
-            
-            
-
-            <div class="post-img-box">
-              <a href="/2024/09/03/ESP32/esp-idf%E7%9A%84%E5%AE%89%E8%A3%85/esp-idf%E7%9A%84%E5%AE%89%E8%A3%85/" class="post-img " style="background-size: cover; 
-                background-position: center center;">
-                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="/picture/ESP32/esp-idf%E7%9A%84%E5%AE%89%E8%A3%85/theme.png" class="lazyload placeholder" data-srcset="/picture/ESP32/esp-idf%E7%9A%84%E5%AE%89%E8%A3%85/theme.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
-              </a>
-            </div>
-            <div class="post-date-title">
-              <div>
-                
-                  <span class="post-date">09-03</span>
-                
-              </div>
-              <a class="post-title" href="/2024/09/03/ESP32/esp-idf%E7%9A%84%E5%AE%89%E8%A3%85/esp-idf%E7%9A%84%E5%AE%89%E8%A3%85/">esp-idf的安装</a>
-            </div>
-          </div>
-        
-          <div class="aside-list-item">
-            
-            
-            
-
-            <div class="post-img-box">
-              <a href="/2024/08/29/Mircosoft/Visio%E5%AE%89%E8%A3%85/Visio%E5%AE%89%E8%A3%85/" class="post-img " style="background-size: cover; 
-                background-position: center center;">
-                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="/picture/Mircosoft/Visio%E5%AE%89%E8%A3%85/theme.png" class="lazyload placeholder" data-srcset="/picture/Mircosoft/Visio%E5%AE%89%E8%A3%85/theme.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
-              </a>
-            </div>
-            <div class="post-date-title">
-              <div>
-                
-                  <span class="post-date">08-29</span>
-                
-              </div>
-              <a class="post-title" href="/2024/08/29/Mircosoft/Visio%E5%AE%89%E8%A3%85/Visio%E5%AE%89%E8%A3%85/">Visio安装</a>
             </div>
           </div>
         
