@@ -711,7 +711,7 @@
       <link href="/2023/12/01/%E5%A4%87%E5%BF%98%E5%BD%95/%E5%A4%87%E5%BF%98%E5%BD%95/"/>
       <url>/2023/12/01/%E5%A4%87%E5%BF%98%E5%BD%95/%E5%A4%87%E5%BF%98%E5%BD%95/</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<p>:-1: error: msvc-based-version.conf loaded but QMAKE_MSC_VER isn’t set<br>写博客 :-1: error: msvc-version.conf loaded but QMAKE_MSC_VER isn’t set的解决方法<br><a href="https://www.cnblogs.com/ax0409/p/13684418.html">https://www.cnblogs.com/ax0409/p/13684418.html</a></p><p>多个sdk环境共存，在control panel卸载</p><p>vs2022新版本将windows10 sdk和分开了<br>以往单独sdk下载地址<a href="https://developer.microsoft.com/en-us/windows/downloads/sdk-archive/">https://developer.microsoft.com/en-us/windows/downloads/sdk-archive/</a><br>2022与2017不兼容</p>]]></content>
       
       
       
@@ -787,7 +787,7 @@
       <link href="/2023/09/09/hello-world/"/>
       <url>/2023/09/09/hello-world/</url>
       
-        <content type="html"><![CDATA[<h2 class="bamboo-h " id="关于破站感言2l3xnfz14qo">关于破站感言</h2><br/><p><strong>总之,这是第一次建立了属于自己的博客,感觉心里倍感骄傲hh</strong><br><strong>之后我会把如何在linux和windows上使用hexo建站的感悟都分享给大家</strong><br><strong>还有是打算把自己以前学过的知识分享出来，同时这个博客也可以给自己当做一个备忘录ww</strong></p>]]></content>
+        <content type="html"><![CDATA[<h2 class="bamboo-h " id="关于破站感言52mj5eqoca0">关于破站感言</h2><br/><p><strong>总之,这是第一次建立了属于自己的博客,感觉心里倍感骄傲hh</strong><br><strong>之后我会把如何在linux和windows上使用hexo建站的感悟都分享给大家</strong><br><strong>还有是打算把自己以前学过的知识分享出来，同时这个博客也可以给自己当做一个备忘录ww</strong></p>]]></content>
       
       
       
