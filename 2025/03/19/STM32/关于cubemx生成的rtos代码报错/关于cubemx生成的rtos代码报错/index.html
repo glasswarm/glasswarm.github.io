@@ -621,7 +621,7 @@
       
         <div class="post-detail-header_wordcount">
           <span class="totalcount">
-            <i class="fas fa-file-text-o"></i> 字数统计: 128 |
+            <i class="fas fa-file-text-o"></i> 字数统计: 247 |
           </span>
   
           <span class="min2read">
@@ -660,8 +660,8 @@
               <div class="img-wrap"><div class="img-bg"><img class="img lazyload placeholder" src="/picture/STM32/关于cubemx生成的rtos代码报错/3.jpg" class="lazyload placeholder" data-srcset="/picture/STM32/关于cubemx生成的rtos代码报错/3.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="图三" style="height:300px;"/></div><span class="image-caption">图三</span></div> <div class="img-wrap"><div class="img-bg"><img class="img lazyload placeholder" src="/picture/STM32/关于cubemx生成的rtos代码报错/4.jpg" class="lazyload placeholder" data-srcset="/picture/STM32/关于cubemx生成的rtos代码报错/4.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="图四" style="height:300px;"/></div><span class="image-caption">图四</span></div> 
             </div>
 <h4 id="报错信息"><a href="#报错信息" class="headerlink" title="报错信息"></a>报错信息</h4><p><img src="/picture/STM32/%E5%85%B3%E4%BA%8Ecubemx%E7%94%9F%E6%88%90%E7%9A%84rtos%E4%BB%A3%E7%A0%81%E6%8A%A5%E9%94%99/6.jpg" class="lazyload placeholder" data-srcset="/picture/STM32/%E5%85%B3%E4%BA%8Ecubemx%E7%94%9F%E6%88%90%E7%9A%84rtos%E4%BB%A3%E7%A0%81%E6%8A%A5%E9%94%99/6.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="报错信息"></p>
-<h4 id="报错原因"><a href="#报错原因" class="headerlink" title="报错原因"></a>报错原因</h4><p><strong>KEIL5.37以上默认编译器6，导致rvd中的arm_cm4f中的文件不适配。</strong></p>
-<h4 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h4><p><strong>在工程内找到该目录，将里面两个文件替换为从官网下载的Freertos文件</strong><br><img src="/picture/STM32/%E5%85%B3%E4%BA%8Ecubemx%E7%94%9F%E6%88%90%E7%9A%84rtos%E4%BB%A3%E7%A0%81%E6%8A%A5%E9%94%99/7.jpg" class="lazyload placeholder" data-srcset="/picture/STM32/%E5%85%B3%E4%BA%8Ecubemx%E7%94%9F%E6%88%90%E7%9A%84rtos%E4%BB%A3%E7%A0%81%E6%8A%A5%E9%94%99/7.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="Keil文件"><br><strong>官方文件下载地址</strong><br><img src="/picture/STM32/%E5%85%B3%E4%BA%8Ecubemx%E7%94%9F%E6%88%90%E7%9A%84rtos%E4%BB%A3%E7%A0%81%E6%8A%A5%E9%94%99/8.png" class="lazyload placeholder" data-srcset="/picture/STM32/%E5%85%B3%E4%BA%8Ecubemx%E7%94%9F%E6%88%90%E7%9A%84rtos%E4%BB%A3%E7%A0%81%E6%8A%A5%E9%94%99/8.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="官方文件"></p>
+<h4 id="报错原因"><a href="#报错原因" class="headerlink" title="报错原因"></a>报错原因</h4><p><strong>Keil早期（比如 MDK v4&#x2F;v5）使用的是 RVDS（RealView Development Suite）的编译器，后来，Keil引入了新的编译器 ARM Compiler 5（简称 AC5），它是基于RVDS演变过来的，继续使用类似 RVDS 的指令集和结构,MDK v5.25以后，Keil开始支持新的 ARM Compiler 6（简称 AC6），它实际上是基于 LLVM + Clang 内核改造的，所以风格上更接近 GCC，虽然还保留了Keil的界面和工程体系。</strong><br><strong>KEIL5.37以上默认AC6，导致rvds中的arm_cm4f中的文件不适配。</strong></p>
+<h4 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h4><p><strong>在工程内找到该目录，将里面两个文件替换为从官网下载的Freertos文件</strong><br><img src="/picture/STM32/%E5%85%B3%E4%BA%8Ecubemx%E7%94%9F%E6%88%90%E7%9A%84rtos%E4%BB%A3%E7%A0%81%E6%8A%A5%E9%94%99/7.jpg" class="lazyload placeholder" data-srcset="/picture/STM32/%E5%85%B3%E4%BA%8Ecubemx%E7%94%9F%E6%88%90%E7%9A%84rtos%E4%BB%A3%E7%A0%81%E6%8A%A5%E9%94%99/7.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="Keil文件"><br><strong>官方文件需要移植的地址(GCC)</strong><br><img src="/picture/STM32/%E5%85%B3%E4%BA%8Ecubemx%E7%94%9F%E6%88%90%E7%9A%84rtos%E4%BB%A3%E7%A0%81%E6%8A%A5%E9%94%99/8.png" class="lazyload placeholder" data-srcset="/picture/STM32/%E5%85%B3%E4%BA%8Ecubemx%E7%94%9F%E6%88%90%E7%9A%84rtos%E4%BB%A3%E7%A0%81%E6%8A%A5%E9%94%99/8.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="官方文件"></p>
 <ul>
 <li>官方文件下载地址：<a target="_blank" rel="noopener" href="https://sourceforge.net/projects/freertos/files/FreeRTOS/">https://sourceforge.net/projects/freertos/files/FreeRTOS/</a><br><strong>或者在STM32Cube_package包内找到GCC下的ARM_CM3文件</strong><br><img src="/picture/STM32/%E5%85%B3%E4%BA%8Ecubemx%E7%94%9F%E6%88%90%E7%9A%84rtos%E4%BB%A3%E7%A0%81%E6%8A%A5%E9%94%99/9.png" class="lazyload placeholder" data-srcset="/picture/STM32/%E5%85%B3%E4%BA%8Ecubemx%E7%94%9F%E6%88%90%E7%9A%84rtos%E4%BB%A3%E7%A0%81%E6%8A%A5%E9%94%99/9.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="STM32Cube_package"></li>
 </ul>
@@ -997,6 +997,27 @@
             
 
             <div class="post-img-box">
+              <a href="/2025/04/27/STM32/%E5%85%B3%E4%BA%8E%E9%AB%98%E7%89%88%E6%9C%ACkeil5%E7%BC%BA%E5%B0%91AC5%E7%BC%96%E8%AF%91%E5%99%A8%E5%B9%B6%E5%AE%89%E8%A3%85/%E5%85%B3%E4%BA%8E%E9%AB%98%E7%89%88%E6%9C%ACkeil5%E7%BC%BA%E5%B0%91AC5%E7%BC%96%E8%AF%91%E5%99%A8%E5%B9%B6%E5%AE%89%E8%A3%85/" class="post-img " style="background-size: cover; 
+                background-position: center center;">
+                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="/picture/STM32/%E5%85%B3%E4%BA%8E%E9%AB%98%E7%89%88%E6%9C%ACkeil5%E7%BC%BA%E5%B0%91AC5%E7%BC%96%E8%AF%91%E5%99%A8%E5%B9%B6%E5%AE%89%E8%A3%85/theme.png" class="lazyload placeholder" data-srcset="/picture/STM32/%E5%85%B3%E4%BA%8E%E9%AB%98%E7%89%88%E6%9C%ACkeil5%E7%BC%BA%E5%B0%91AC5%E7%BC%96%E8%AF%91%E5%99%A8%E5%B9%B6%E5%AE%89%E8%A3%85/theme.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+              </a>
+            </div>
+            <div class="post-date-title">
+              <div>
+                
+                  <span class="post-date">04-27</span>
+                
+              </div>
+              <a class="post-title" href="/2025/04/27/STM32/%E5%85%B3%E4%BA%8E%E9%AB%98%E7%89%88%E6%9C%ACkeil5%E7%BC%BA%E5%B0%91AC5%E7%BC%96%E8%AF%91%E5%99%A8%E5%B9%B6%E5%AE%89%E8%A3%85/%E5%85%B3%E4%BA%8E%E9%AB%98%E7%89%88%E6%9C%ACkeil5%E7%BC%BA%E5%B0%91AC5%E7%BC%96%E8%AF%91%E5%99%A8%E5%B9%B6%E5%AE%89%E8%A3%85/">关于高版本keil5缺少AC5编译器并安装</a>
+            </div>
+          </div>
+        
+          <div class="aside-list-item">
+            
+            
+            
+
+            <div class="post-img-box">
               <a href="/2025/04/21/Python/Setup%E7%9A%84%E4%B9%A6%E5%86%99/Setup%E7%9A%84%E4%B9%A6%E5%86%99/" class="post-img " style="background-size: cover; 
                 background-position: center center;">
                 <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="/picture/Python/Setup%E7%9A%84%E4%B9%A6%E5%86%99/theme.png" class="lazyload placeholder" data-srcset="/picture/Python/Setup%E7%9A%84%E4%B9%A6%E5%86%99/theme.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
@@ -1072,27 +1093,6 @@
                 
               </div>
               <a class="post-title" href="/2025/04/05/QT/%E5%85%B3%E4%BA%8EQT%E7%9A%84mysql%E9%A9%B1%E5%8A%A8%E6%9C%AA%E5%AE%89%E8%A3%85%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/%E5%85%B3%E4%BA%8EQT%E7%9A%84mysql%E9%A9%B1%E5%8A%A8%E6%9C%AA%E5%AE%89%E8%A3%85%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/">关于QT的mysql驱动未安装解决方案</a>
-            </div>
-          </div>
-        
-          <div class="aside-list-item">
-            
-            
-            
-
-            <div class="post-img-box">
-              <a href="/2025/03/23/QT/%E9%85%8D%E7%BD%AEQT%E7%9A%84c++%E5%92%8Cpy%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E7%8E%AF%E5%A2%83/%E9%85%8D%E7%BD%AEQT%E7%9A%84c++%E5%92%8Cpy%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E7%8E%AF%E5%A2%83/" class="post-img " style="background-size: cover; 
-                background-position: center center;">
-                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="/picture/QT/%E9%85%8D%E7%BD%AEQT%E7%9A%84c++%E5%92%8Cpy%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E7%8E%AF%E5%A2%83/theme.png" class="lazyload placeholder" data-srcset="/picture/QT/%E9%85%8D%E7%BD%AEQT%E7%9A%84c++%E5%92%8Cpy%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E7%8E%AF%E5%A2%83/theme.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
-              </a>
-            </div>
-            <div class="post-date-title">
-              <div>
-                
-                  <span class="post-date">03-23</span>
-                
-              </div>
-              <a class="post-title" href="/2025/03/23/QT/%E9%85%8D%E7%BD%AEQT%E7%9A%84c++%E5%92%8Cpy%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E7%8E%AF%E5%A2%83/%E9%85%8D%E7%BD%AEQT%E7%9A%84c++%E5%92%8Cpy%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E7%8E%AF%E5%A2%83/">配置QT的c++和py交叉编译环境</a>
             </div>
           </div>
         
